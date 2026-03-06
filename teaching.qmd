@@ -11,7 +11,7 @@
 4. TFP and long-term growth
 5. Labor supply and unemployment
 6. Consumption and investment
-7. The short run: IS-MP and the Philips curve
+7. The short run: IS-MP and the Phillips curve
 8. The short run: AS-AD, the Taylor rule, the time-inconsistency problem
 9. Money and monetary policy
 10. Government debt and fiscal policy
@@ -33,3 +33,4 @@
 6. Monetary policy rules and the transmission of monetary policy
 7. Topics in monetary policy
 8. Public debt and fiscal policy
+
