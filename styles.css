@@ -75,12 +75,20 @@ li {
   margin-bottom: 6px;
 }
 
-/* Improve spacing for nested lists */
-li ul,
-li ol {
-  margin-top: 6px;
+/* Nested lists: more separation and slightly more compact text */
+li > ul,
+li > ol {
+  margin-top: 8px;
+  margin-bottom: 4px;
+  padding-left: 20px;
 }
 
+li > ul > li,
+li > ol > li {
+  font-size: 0.95em;
+  line-height: 1.25;
+  margin-bottom: 3px;
+}
 .blog-list li {
   margin-bottom: 6px;
 }
@@ -258,3 +266,4 @@ li ol {
     height: 140px;
   }
 }
+
