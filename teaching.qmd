@@ -5,18 +5,18 @@
 - Undergraduate
 - I teach the fall-semester version of this course
 - Contents (Fall 2025):
-1. Measuring the macroeconomy
-2. Economic growth and the Solow model
-3. More growth: human capital, finite natural resources, Malthus
-4. TFP and long-term growth: the Romer model
-5. Labor supply and unemployment
-6. Consumption and investment
-7. The short run: IS-MP and the Phillips curve
-8. The short run: AS-AD, the Taylor rule, the time-inconsistency problem
-9. Money and monetary policy
-10. Government debt and fiscal policy
-11. Exchange rates and international finance
-12. Open economy macroeconomics and the international monetary system
+  - Measuring the macroeconomy
+  - Economic growth and the Solow model
+  - More growth: human capital, finite natural resources, Malthus
+  - TFP and long-term growth: the Romer model
+  - Labor supply and unemployment
+  - Consumption and investment
+  - The short run: IS-MP and the Phillips curve
+  - The short run: AS-AD, the Taylor rule, the time-inconsistency problem
+  - Money and monetary policy
+  - Government debt and fiscal policy
+  - Exchange rates and international finance
+  - Open economy macroeconomics and the international monetary system
 
 
 ### Master's course in macroeconomics
@@ -33,6 +33,7 @@
   - Monetary policy rules and the transmission of monetary policy
   - Topics in monetary policy
   - Public debt and fiscal policy
+
 
 
 
