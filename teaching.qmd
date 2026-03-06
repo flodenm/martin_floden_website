@@ -7,8 +7,8 @@
 - Contents (Fall 2025):
 1. Measuring the macroeconomy
 2. Economic growth and the Solow model
-3. Topics on growth: human capital, technological progress, finite natural resources, Malthus
-4. TFP and long-term growth
+3. More growth: human capital, finite natural resources, Malthus
+4. TFP and long-term growth: the Romer model
 5. Labor supply and unemployment
 6. Consumption and investment
 7. The short run: IS-MP and the Phillips curve
@@ -33,4 +33,5 @@
 6. Monetary policy rules and the transmission of monetary policy
 7. Topics in monetary policy
 8. Public debt and fiscal policy
+
 
