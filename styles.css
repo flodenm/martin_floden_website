@@ -78,7 +78,7 @@ li {
 /* Nested lists: more separation and slightly more compact text */
 li > ul,
 li > ol {
-  margin-top: 8px;
+  margin-top: 6px;
   margin-bottom: 4px;
   padding-left: 20px;
 }
@@ -266,6 +266,7 @@ li > ol > li {
     height: 140px;
   }
 }
+
 
 
 
