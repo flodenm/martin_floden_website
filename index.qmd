@@ -1,0 +1,47 @@
+---
+toc: false
+---
+
+<div class="home-grid">
+
+<div class="home-left">
+I am a macroeconomist in the [Department of Economics at Stockholm University](https://www.su.se/english/divisions/department-of-economics)
+</div>
+
+<div class="home-right">
+  <img class="home-photo" src="images/martin_floden.jpg" alt="Martin Flodén">
+</div>
+</div>
+
+## Recent Activities
+
+- Op-ed: [En oberoende centralbank -- med ett snävt mandat](https://martinfloden.net/files/DI_debatt_260120.pdf) (in Swedish), Dagens Industri, January 20, 2026
+- Chapter in report on Sweden and the Euro, December 2025: [Kronan och konjunkturen](https://frittnaringsliv.se/dags-for-euron/) (in Swedish)
+
+
+
+## Short Bio
+
+### Current
+- Professor of Economics, Stockholm University, since 2010 (on leave 2013-2024)
+- CEPR, Research Fellow (Monetary Economics and Fluctuations)
+- Finansinspektionen (Swedish Financial Supervisory Authority), Board of Directors
+- Riksgälden (Swedish National Debt Office), Advisory Scientific Council
+- [CEMOF](https://www.su.se/english/divisions/center-for-monetary-policy-and-financial-stability) (Center for Monetary Policy and Financial Stability)], Management Team
+
+### Sveriges Riksbank
+- Deputy Governor and Member of the Executive Board, 2013-2024
+- International assignments: OECD WP3 (2013-2024), Bellagio Group (2013-2024), Basel Committee on Banking Supervision (2020-2024), FSB Regional Consultative Group (2020-2024)
+- Domestic assignments: Chairman of the Infrastructure Council for Payments and Securities (2022-2024)
+
+### Stockholm School of Economics
+- Associate Professor 2005-2009
+- Assistant Professor 2001-2005
+- Research Associate 1999-2001
+
+### Selected Other Previous Activities
+- Journal of Economic Dynamics and Control, Associate Editor 2010-2013
+- Fiscal Studies, member of the editorial board, 2007-2013
+- Swedish National Debt Office, board member 2012-2013
+- Swedish Fiscal Policy Council, member, 2007-2010
+- Swedish Economic Council, member, 2006-2007

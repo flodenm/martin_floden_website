@@ -1,0 +1,28 @@
+project:
+  type: website
+
+website:
+  search: false
+  navbar:
+    left: 
+      - text: "Martin Flodén"
+        href: index.qmd
+    right:
+      - href: research.qmd
+        text: Research
+      - href: teaching.qmd
+        text: Teaching  
+      - href: policy.qmd
+        text: Policy
+      - href: riksbank.qmd
+        text: Riksbank
+      - href: files/cv.pdf
+        text: CV
+      - href: contact.qmd
+        text: Contact
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: false

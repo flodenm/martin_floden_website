@@ -1,0 +1,5 @@
+---
+format:
+  html:
+    include-after-body: research-content.html
+---
