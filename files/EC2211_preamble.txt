@@ -1,0 +1,85 @@
+%\usetheme[progressbar=frametitle]{metropolis}
+\usetheme{metropolis}
+
+\usepackage{appendixnumberbeamer}
+
+\usepackage{colortbl}
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+\usepackage{xspace}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\definecolor{SU_Blue}{rgb}{0,0.1843,0.3725}
+\definecolor{SU_Blue80}{rgb}{0,0.1843,0.3725}
+\definecolor{SU_Himmel}{rgb}{0.6745,0.8706,0.9020}
+\definecolor{SU_Himmel20}{rgb}{0.9333,0.9765,0.9804}
+\definecolor{SU_Gray20}{rgb}{0.2941,0.2941,0.2941}
+\definecolor{SU_Eld}{rgb}{0.9216,0.4431,0.1451}
+
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+
+\newcommand{\mfemph}[1]{\textbf{\textcolor{SU_Blue}{#1}}}
+
+\setbeamercolor*{palette primary}{bg=white,fg=SU_Blue}
+\setbeamercolor*{palette secondary}{bg=white,fg=SU_Blue}
+\setbeamercolor*{palette tertiary}{bg=white,fg=SU_Blue}
+\setbeamercolor*{palette quarternary}{bg=white,fg=SU_Blue}
+\setbeamercolor*{structure}{bg=white,fg=SU_Blue80}
+%\setbeamercolor*{frametitle}{bg=SU_Blue,fg=white}
+\setbeamercolor*{frametitle}{bg=SU_Blue80!7!white,fg=SU_Blue}
+\setbeamercolor*{title}{bg=white,fg=SU_Blue}
+\setbeamercolor*{titlelike}{bg=white,fg=SU_Blue}
+\setbeamercolor*{normal text}{bg=white,fg=black}
+\setbeamercolor{progress bar}{bg=SU_Blue,fg=SU_Blue}
+%\setbeamercolor*{progress bar}{bg=white,fg=white}
+\setbeamercolor*{frametitle separator}{}
+\setbeamercolor*{title separator}{fg=SU_Blue}
+\setbeamercolor{alerted text}{fg=SU_Blue}
+\renewcommand{\alert}[1]{\textbf{\textcolor{SU_Blue80}{#1}}}
+
+\setbeamersize{text margin left=4mm, text margin right=8mm}
+\setlength{\leftmargini}{4mm}
+\setlength{\leftmarginii}{4mm}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=SU_Blue80!70!SU_Himmel,
+    filecolor=SU_Blue80!70!SU_Himmel,      
+    urlcolor=SU_Blue80!70!SU_Himmel,
+    pdftitle={EC2211},
+    pdfpagemode=FullScreen,
+    pdfhighlight=/N,
+    anchorcolor=red
+    }
+
+\usepackage[skip=0pt plus1pt, indent=0pt]{parskip}
+
+%\newenvironment{tightitemize}{\itemize\addtolength{\itemsep}{-4pt}}{\enditemize}
+\newenvironment{tightitemize}{\itemize\setlength{\baselineskip}{-3pt}}{\enditemize}
+
+
+\newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
+\newcolumntype{C}[1]{>{\PreserveBackslash\centering}p{#1}}
+\newcolumntype{R}[1]{>{\PreserveBackslash\raggedleft}p{#1}}
+\newcolumntype{L}[1]{>{\PreserveBackslash\raggedright}p{#1}}
+
+\setbeamertemplate{itemize subitem}{\scriptsize$\circ$}
+
+\DeclareCaptionLabelFormat{mf_caption}{}
+\DeclareCaptionLabelSeparator{mf_caption}{}
+\DeclareCaptionFormat{mf_caption}{\small #3}
+\captionsetup
+{
+    format=mf_caption,%
+    labelformat=mf_caption,%
+    labelsep=mf_caption
+}
+\renewcommand{\d}[1]{\ensuremath{\operatorname{d}\!{#1}}}
