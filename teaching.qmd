@@ -25,13 +25,14 @@
 - The listed textbook for the course is David Romer's "Advanced Macroeconomics" but it is mostly used as background reading
 - I provide detailed lecture notes for all theoretical material covered
 - Contents (Fall 2025):
-1. Consumption theory
-2. The neoclassical growth model
-3. The overlapping generations model
-4. The real business cycle model
-5. The new keynesian business cycle model
-6. Monetary policy rules and the transmission of monetary policy
-7. Topics in monetary policy
-8. Public debt and fiscal policy
+  1. Consumption theory
+  2. The neoclassical growth model
+  3. The overlapping generations model
+  4. The real business cycle model
+  5. The new keynesian business cycle model
+  6. Monetary policy rules and the transmission of monetary policy
+  7. Topics in monetary policy
+  8. Public debt and fiscal policy
+
 
 
