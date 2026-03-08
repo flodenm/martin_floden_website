@@ -4,6 +4,8 @@ project:
 resources:
   - files
   - images
+  - EC7210
+  - RBfiles
 
 website:
   search: false
