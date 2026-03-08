@@ -1,6 +1,10 @@
 project:
   type: website
 
+resources:
+  - files
+  - images
+
 website:
   search: false
   navbar:
