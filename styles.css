@@ -61,6 +61,14 @@ a:hover {
   text-decoration: underline;
 }
 
+.sub-links {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.sub-links a {
+  color: #666;
+}
 
 /* ==================================================
    3. Lists
@@ -266,6 +274,7 @@ li > ol > li {
     height: 140px;
   }
 }
+
 
 
 
