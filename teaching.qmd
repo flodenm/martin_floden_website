@@ -1,7 +1,6 @@
 ## Martin Flodén: Teaching
 
-### Intermediate Macroeconomics
-- [EC2211 Intermediate Macroeconomics](https://www.su.se/english/education/course-catalogue/ec/ec2211)
+### [EC2211 Intermediate Macroeconomics](https://www.su.se/english/education/course-catalogue/ec/ec2211)
 - Undergraduate
 - I teach the fall-semester version of this course
 - Contents (Fall 2025):
@@ -19,8 +18,7 @@
   - Open economy macroeconomics and the international monetary system
 
 
-### Master's course in macroeconomics
-- [EC7210 Macroeconomics](https://www.su.se/english/education/course-catalogue/ec/ec7210)
+### [EC7210 Macroeconomics](https://www.su.se/english/education/course-catalogue/ec/ec7210)
 - Compulsory first-semester course in the Master's program
 - The listed textbook for the course is David Romer's "Advanced Macroeconomics" but it is mostly used as background reading
 - I provide detailed lecture notes for all theoretical material covered
