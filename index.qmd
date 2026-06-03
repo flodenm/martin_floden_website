@@ -1,5 +1,7 @@
 ---
+title: "Martin Floden"
 toc: false
+title-block-style: none
 ---
 
 <div class="home-grid">
