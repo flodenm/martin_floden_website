@@ -6,6 +6,7 @@ resources:
   - images
   - EC7210
   - RBfiles
+  - EC2211
 
 website:
   search: false
