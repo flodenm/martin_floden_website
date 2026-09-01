@@ -1,0 +1,500 @@
+% COURSE-ASSISTANT SOURCE — FALL 2025 ARCHIVE
+% This material is not authoritative for Fall 2026; current-course material
+% takes priority. See LN04_figure_notes.md for figures not stored here and
+% LN04_errata.md for a correction to the human-capital growth-accounting slide.
+\documentclass[10pt,handout]{beamer}
+\input{EC2211_preamble.txt}
+\title{Lecture Notes 4\newline TFP and Long-Term Economic Growth}
+
+
+\begin{document}
+\maketitle
+
+
+\begin{frame}{Contents and literature}
+    \begin{itemize}
+        \item Towards endogenous growth
+        \item The Romer model
+        \item Institutions and growth
+        \item Growth at the frontier
+    \end{itemize}
+    \bigskip
+
+    Literature: 
+    \small{
+    \begin{tightitemize}
+        \item Jones (2024), chapter 6
+        \item The Royal Swedish Academy of Sciences (2018), \href{https://www.nobelprize.org/uploads/2018/10/popular-economicsciencesprize2018.pdf}{"Integrating nature and knowledge into economics"}, in particular pages 1-4
+        \item Royal Swedish Academy of Sciences (2024) \href{https://www.nobelprize.org/uploads/2024/10/popular-economicsciencesprize2024.pdf}{"They provided an explanation for why some countries are rich and others poor"}
+        \item Gordon (2014), \href{https://www.nber.org/system/files/working_papers/w19895/w19895.pdf}{"The demise of U.S. economic growth"}, sections 1-3.3
+        \item Jones (2023), \href{https://www.kansascityfed.org/Jackson\%20Hole/documents/9771/GrowthOutlookPanel.pdf}{"The outlook for long-term economic growth"}
+        \item Draghi (2024) \href{https://commission.europa.eu/document/download/97e481fd-2dc3-412d-be4c-f152a8232961_en?filename=The\%20future\%20of\%20European\%20competitiveness\%20_\%20A\%20competitiveness\%20strategy\%20for\%20Europe.pdf}{"The future of European competitiveness"}, pages 5-19
+    \end{tightitemize}
+    }
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Towards endogenous growth}
+
+
+\begin{frame}{Towards endogenous growth}
+\begin{itemize}
+    \item The Solow model offers valuable insights into cross-country differences in income per capita but fails to explain sustained growth\medskip
+    \item Next: endogenous growth
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{The AK "model"}
+    What happens when we relax the assumption of diminishing marginal product of capital? \smallskip
+
+    \begin{equation}\label{eq35}
+        Y_t=AK_t
+    \end{equation}\smallskip
+
+    Capital accumulation:
+    \begin{equation}\label{eq36}
+        K_{t+1} = (1-\delta)K_t + I_t = (1-\delta) K_t + s AK_t
+    \end{equation}\smallskip
+
+    Equations \eqref{eq35} and \eqref{eq36} imply that:
+    \begin{equation}\label{eq37}
+         \frac{Y_{t+1}}{Y_{t}}=\frac{K_{t+1}}{K_{t}}= 1 - \delta + sA
+    \end{equation}
+\end{frame}
+
+
+\begin{frame}{The AK "model"}
+    Since
+    \begin{equation*}
+        \gamma \equiv \frac{Y_{t+1}-Y_t}{Y_{t}}= \frac{Y_{t+1}}{Y_{t}}-1,
+    \end{equation*}
+    the growth rate of GDP is:
+    \begin{equation}\label{eq38}
+        \gamma = sA - \delta
+    \end{equation}
+
+    An assumption of constant marginal product of capital thus generates endogenous growth! \medskip
+
+    Recall that a higher savings rate $s$ did \emph{not} generate higher long-run growth in the Solow model\medskip
+
+    We see here that higher savings (more investments) would generate higher long-run growth if the marginal product of capital were not diminishing
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The Romer model}
+
+
+\begin{frame}{The Romer model}
+\begin{columns}
+    \column{0.6\textwidth}
+    \begin{itemize}
+        \item Romer (1990), "Endogenous technological change"\medskip
+
+        \item \href{https://www.nobelprize.org/prizes/economic-sciences/2018/romer/facts/}{Nobel prize 2018}: \small{"for integrating technological innovations into long-run macroeconomic analysis"}
+    \end{itemize}
+
+    \column{0.4\textwidth}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.95\linewidth]{romer.jpg}
+    \end{figure}
+    \centering \small{Paul Romer 1955-}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{The Romer model}
+\begin{itemize}
+    \item Distinguish between objects (rivalrous) and ideas (non-rivalrous)\medskip
+    \item Workers can either produce consumption goods or new ideas\medskip
+    \item A single idea can be used by many people simultaneously\medskip
+    \item Non-rivalry generates increasing returns\medskip
+    \item Omit physical capital for simplicity
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{}
+    \begin{figure}
+        \centering
+        \includegraphics[width=1\linewidth]{Nonrivalry goods.jpg}
+    \end{figure}
+    \flushright \tiny{From Royal Academy of Sciences (2018)}
+\end{frame}
+
+
+\begin{frame}{Notation}
+\begin{itemize}
+    \item[] $Y_t$: output of the consumption good
+    \item[] $A_t$: the existing stock of knowledge
+    \item[] $L_t$: the population
+    \item[] $n$: population growth rate
+    \item[] $L_{yt}$: number of workers employed in goods production
+    \item[] $L_{at}$: number of researchers (producing ideas)
+    \item[] $\gamma$: parameter in the production function 
+    \item[] $\lambda$: fraction of labor force employed in research
+    \item[] $\zeta$: productivity parameter
+    \item[] $A_0$: the initial stock of knowledge
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{The Romer model}
+    Production of the consumption good:
+    \begin{equation}\label{eq39}
+        Y_t = A_t^\gamma L_{yt}
+    \end{equation}
+
+    Production of new ideas:
+    \begin{equation}\label{eq40}
+        \Delta A_{t+1} = \zeta L_{at}
+    \end{equation}
+
+    Resource constraint for labor:
+    \begin{equation}\label{eq41}
+        L_{yt} + L_{at} = L_t
+    \end{equation}
+    and 
+        \[L_{t+1}=(1+n)L_t
+    \] 
+    
+    Labor is allocated according to:
+    \begin{equation}\label{eq42}
+        L_{at} = \lambda L_t
+    \end{equation}
+    \begin{equation}\label{eq43}
+        L_{yt} = (1-\lambda)L_t
+    \end{equation}
+\end{frame}
+
+
+\begin{frame}{Solving the model}
+    Dividing \eqref{eq39} by $L$ and using (\ref{eq43}) gives output per capita: 
+    \begin{equation}\label{eq44}
+        y_t \equiv \frac{Y_t}{L_t} = A_t^\gamma (1-\lambda)
+    \end{equation}
+
+    Dividing \eqref{eq40} by $A_t$ gives the growth rate of TFP:
+    \begin{equation*}
+        g_{At} \equiv \frac{\Delta A_{t+1}}{A_t} = \zeta \frac{L_{at}}{A_t}
+    \end{equation*}
+    or (assuming that the growth rate is positive)
+    \begin{equation}\label{eq45}
+        A_t = \frac{\zeta}{g_{At}}L_{at}
+    \end{equation}
+\end{frame}
+
+
+\begin{frame}{The balanced growth path}
+\begin{itemize}
+    \item Is there a long-run equilibrium ("balanced growth path") where all variables grow at constant rates? \smallskip
+
+    \item If so, $g_{At}$ must be constant (since we assume that $L$, $L_y$ and $L_a$ grow at constant rates)
+    \begin{tightitemize}
+        \item[] Equation \eqref{eq45} then shows that the stock of knowledge is proportional to the number of researchers, $L_{at}$
+    \end{tightitemize} \smallskip
+
+    \item Since $L_{at}$ in turn is a constant fraction of the population, this means that $A$ and $L$ must grow at the same rate on the balanced growth path
+    \begin{tightitemize}
+        \item[] That is, $g_A=n$ in the long run
+    \end{tightitemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Interpreting the Romer model}
+\begin{itemize}
+    \item Equation \eqref{eq44} shows that output per capita will grow as long as the stock of knowledge, $A_t$ increases\smallskip
+
+    \item The model moreover shows that the stock of knowledge increases at the same rate as the population\smallskip
+
+    \item And from the production function we see that the growth rate of output per capita is $\gamma n$\smallskip
+
+    \item Note the key difference to the Solow model where an investment generates more capital, but where capital is rivalry -- it is "less useful" when shared by many workers\smallskip
+
+    \item In the Romer model, investment generates more knowledge which is not rivalry; all workers become more productive irrespective of how many they are
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{A permanent rise in research productivity (higher $\zeta$)}
+    \pause
+    \begin{figure}
+        \includegraphics[scale=0.35]{MACRO6_FIG06.03.jpg}
+    \end{figure}
+    \flushright \tiny Figure 6.3 in Jones (2024). Recall that his $\overline{z}$ is our $\zeta$.
+\end{frame}
+
+
+\begin{frame}{A permanent rise in the research share (higher $\lambda$)}
+    \pause
+    \begin{figure}
+        \includegraphics[scale=0.35]{MACRO6_FIG06.04.jpg}
+    \end{figure}
+    \flushright \tiny Figure 6.4 in Jones (2024). Recall that his $\overline{l}$ is our $\lambda$.
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Summing up:\newline Malthus $\rightarrow$ Solow $\rightarrow$ Romer}
+
+
+\begin{frame}{Malthus $\rightarrow$ Solow $\rightarrow$ Romer}
+\begin{itemize}
+    \item What is important in production? \newline
+            Land (Malthus) $\rightarrow$ Physical capital (Solow) $\rightarrow$ Ideas (Romer) \bigskip
+    \item Population growth rates
+\end{itemize}  
+\end{frame}
+
+
+\begin{frame}{Total fertility rates have trended down}
+\begin{columns}
+    \column{0.5\linewidth}
+    \begin{figure}
+        \centering
+        \includegraphics[width=1\linewidth]{Figs/TFR_a.png}
+    \end{figure}
+    \column{0.5\linewidth}
+    \begin{figure}
+        \centering
+        \includegraphics[width=1\linewidth]{Figs/TFR_b.png}
+    \end{figure}
+\end{columns}
+\flushright \tiny Total fertility rates (the number of children that would be born to a woman if she were to live to the end of her childbearing years and bear children in accordance with age-specific fertility rates of the specified year). Source: \href{https://data360.worldbank.org/en/indicator/WB_WDI_SP_DYN_TFRT_IN?view=datatable&recentYear=false}{World Bank}
+\end{frame}
+
+
+\begin{frame}{Malthus $\rightarrow$ Solow $\rightarrow$ Romer}
+\begin{itemize}
+    \item What is important in production? \newline
+            Land (Malthus) $\rightarrow$ Physical capital (Solow) $\rightarrow$ Ideas (Romer) \bigskip
+    \item Population growth rates
+    \begin{tightitemize}
+        \item Malthus: Population growth is \emph{endogenous}. (Do falling birth rates indicate that productivity has fallen?)
+        \item Solow: A lower population growth rate means that we do not have to build as much capital for our children
+        \item Romer: A lower population growth rate means that there will be fewer new ideas
+    \end{tightitemize}
+\end{itemize}  
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Institutions and growth}
+
+
+\begin{frame}{The role of institutions}
+    \begin{quote}
+        "The factors we have listed (innovation, economies of scale, education, capital accumulation, etc.) are not causes of growth; they are growth."
+    \end{quote}\bigskip
+    \begin{flushright}-North, D.C. and Thomas, R.P. (1973),\linebreak \textit{The Rise of the Western World: A New Economic History}, Cambridge University Press, Cambridge, UK.\end{flushright}
+\end{frame}
+
+
+\begin{frame}{Proximate versus fundamental causes of growth}
+\begin{itemize}
+    \item If growth is about factor accumulation and innovation, why do not poor countries invest and innovate?\medskip
+
+    \item Why do countries provide different incentives to firms and households?\medskip
+
+    \item Proximate causes of growth: factor accumulation and investment in R\&D\medskip
+
+    \item Fundamental causes of growth: luck? geography? culture? institutions?\medskip
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Institutions and growth (Acemoglu, Johnson and Robinson)}
+    \begin{itemize}
+        \item Institutions
+        \begin{tightitemize}
+            \item Humanly devised set of rules
+            \item Place constraints on individual behaviour
+        \end{tightitemize}\medskip
+
+    \item Economic institutions
+    \begin{tightitemize}
+        \item Property rights
+        \item The presence and functioning of markets
+        \item Contractual opportunities available to firms and households
+        \item Entry barriers
+    \end{tightitemize}\medskip
+
+    \item Political institutions
+    \begin{tightitemize} 
+        \item Polity and electoral laws
+        \item Checks and balances on political leaders
+    \end{tightitemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Democracy and income}
+\begin{itemize}
+    \item Is democracy conducive to high income?\medskip
+
+    \item All the old democracies of the world are rich\medskip 
+
+    \item Growth performance of autocracies highly heterogeneous
+    \begin{tightitemize}
+        \item Dictatorships excel or fall behind
+        \item Many of the East Asian growth miracles started out autocratic
+    \end{tightitemize}\medskip
+
+    \item Complex relationship between polity and income!
+\end{itemize}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Growth at the frontier}
+
+
+\begin{frame}{Economic growth: summing up}
+    Sources of temporary and/or long-run growth:\smallskip
+    \begin{itemize}
+        \item Physical capital\smallskip
+        \item Labor, hours worked\smallskip
+        \item Human capital\smallskip
+        \item Productivity, technology
+        \begin{tightitemize}
+            \item Catching up with the frontier
+            \item Efficient use of resources and people
+            \item New ideas, research
+        \end{tightitemize}
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Growth accounting: Can we quantify the contribution of different sources?}
+    Consider our Cobb-Douglas production function:
+    \begin{equation*}
+        Y_t = A_t K_t^\alpha L_t^{1-\alpha}
+    \end{equation*} \medskip
+
+    Apply the rules for growth rates:
+    \begin{equation*}
+        g_{Y_t} = g_{A_t} + \alpha g_{K_t} + (1-\alpha) g_{L_t}
+    \end{equation*} \medskip
+
+    In per capita terms, production is $y_t = A_t k_t^\alpha$, so
+    \begin{equation*}
+        g_{y_t} = g_{A_t} + \alpha g_{k_t}
+    \end{equation*} \medskip
+\end{frame}
+
+
+\begin{frame}{Growth accounting for the USA}
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{MACRO6_Table06.02.jpg}
+\end{figure}
+\flushright \tiny{Table 6.2 in Jones}
+\end{frame}
+
+
+\begin{frame}{Growth accounting with human capital}
+    Suppose that the production function is:
+    \begin{equation*}
+        Y_t = A_t K_t^\alpha (h_tL_t)^{1-\alpha}
+    \end{equation*} 
+    where $h$ is human capital per worker\bigskip
+
+    In per capita terms:
+    \begin{equation*}
+        y_t = A_t k_t^\alpha h_t^{1-\alpha} 
+    \end{equation*} \medskip
+
+    Then:
+    \begin{equation*}
+        g_{y_t} = g_{A_t} + \alpha g_{K_t} + (1-\alpha) g_{h_t}
+    \end{equation*} 
+\end{frame}
+
+
+\begin{frame}{Growth accounting with human capital}
+    Can we measure human capital or do we have to put it in the unexplained TFP term? \medskip
+
+    Human capital is often measured by the average number of years of schooling in the adult population. This is then converted to a human capital index based on empirical data on how schooling affects wages.\medskip
+
+    The \href{https://www.rug.nl/ggdc/productivity/pwt/?lang=en}{Penn World Tables} report such an index:\smallskip
+
+    \begin{table}
+    \small{
+        \centering
+        \begin{tabular}{lccc}
+             & Years of schooling &  & "Human capital" \\ \hline
+            USA  & 13.6 & & 3.75 \\
+            Sweden & 12.3 & & 3.44 \\
+            Mexico & 9.2 & & 2.78 \\
+            Malawi & 5.7 & & 0.71
+        \end{tabular}
+        }
+    \end{table}
+\end{frame}
+
+
+\begin{frame}{The outlook for long-term economic growth}
+    Growth in the U.S. has been surprisingly stable at 2\% per year for the past 150 years\bigskip
+
+    Gordon (2014) and Jones (2023) note that much of this growth is a result of
+    \begin{itemize}
+        \item Rising educational attainment
+        \item Rising investment in research
+    \end{itemize}\medskip
+
+    I would add globalization (with offshoring, restructuring etc) to the list 
+\end{frame}
+
+
+\begin{frame}{The outlook for long-term economic growth}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{JonesGrowthAccounting.png}
+\end{figure}
+\flushright \tiny Figure 5 in Jones (2023)
+\end{frame}
+
+
+\begin{frame}{The outlook for long-term economic growth}
+    Potential tailwinds:
+    \begin{itemize}
+        \item Better utilization of resources (use of talents)
+        \item More frontier contribution from China and India
+        \item AI
+    \end{itemize}\medskip
+
+    Headwinds:
+    \begin{itemize}
+        \item Educational attainment cannot/will not continue to increase
+        \item Research intensity cannot/will not continue to increase
+        \item Population growth will slow or turn negative
+        \item Geopolitics, end of globalization
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{What we did (growth part of the course)}
+\begin{itemize}
+    \item Growth facts\medskip
+    \item Growth accounting\medskip
+    \item From Malthus to Solow to Romer \medskip
+    \item Institutions
+\end{itemize}
+\end{frame}
+
+
+\end{document}
