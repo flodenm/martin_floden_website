@@ -1,0 +1,268 @@
+% COURSE-ASSISTANT SOURCE — FALL 2025 ARCHIVE
+% Historical administrative frames about contact details, Athena, lectures,
+% assessment, seminars, and AI policy have been omitted. They must not be used
+% as guidance for Fall 2026. Current-course material always takes priority.
+% See LN00_figure_notes.md for descriptions of figures not stored here.
+\documentclass[10pt,handout]{beamer}
+
+\input{EC2211_preamble.txt}
+\title{Course Introduction}
+
+\begin{document}
+\maketitle
+
+\begin{frame}{Literature}
+\begin{columns}
+    \column{0.77\textwidth}
+    \begin{itemize}
+        \item Textbook: Charles I. Jones (2024), \textit{Macroeconomics}, W.W. Norton, 6E International Student Edition. \medskip
+        \item Lecture notes (=presentation slides) and problem sets: These are important parts of the course. They also indicate what material and models you should focus on.\medskip
+        \item Articles and policy reports: These are for policy perspectives or in-depth understanding. You should look more closely at articles marked by a *. Don't get stuck on technical material that we have not covered in class.
+    \end{itemize}
+
+    \column{0.23\textwidth}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\linewidth]{JonesBook.jpg}
+    \end{figure}
+\end{columns}
+\end{frame}
+
+
+
+\begin{frame}{Charles "Chad" I. Jones}
+\begin{columns}
+    \column{0.6\textwidth}
+    \begin{itemize}
+        \item Professor, Stanford University (Graduate School of Business)\medskip
+        \item Expert on economic growth, recently with a focus on artificial intelligence \medskip
+        \item \href{https://web.stanford.edu/~chadj/}{https://web.stanford.edu/$\sim$chadj/}
+    \end{itemize}
+
+    \column{0.4\textwidth}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.95\linewidth]{ChadinLafayette_2023tiny.jpg}
+    \end{figure}
+    \centering \small{Chad Jones}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{Prerequisites}
+\begin{itemize}
+    \item I assume that you have taken an introductory course in macroeconomics, like EC1211 \textit{Macroeconomic Theory and Applications}\medskip
+    \item If you have not, you will have to read the textbook more carefully as I will skip some material that I know was covered well in that course\medskip
+    \item There will be some repetition of material covered in EC1211, but my ambition is that we can dig further into some interesting/important macroeconomic questions\medskip
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Contents}
+\begin{itemize}
+    \item Facts about economic aggregates and macroeconomic models\medskip
+    \item Familiarize you with common macroeconomic tools and concepts, and develop your analytical skills\medskip
+    \item Continuous references to historical and current macroeconomic phenomena\medskip
+    \item Global perspective as well as special focus on Sweden\medskip
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{What do macroeconomists do?}
+\begin{itemize}
+    \item[1.] Describe and measure the economy\smallskip
+    \begin{itemize}
+        \item National accounts, growth, unemployment, inflation, productivity, resource utilization, ...\smallskip
+        \item Welfare, inequality\smallskip
+        \item ...\smallskip
+    \end{itemize}
+    \item[2.] Analyze causality, policy options\smallskip
+    \begin{itemize}
+        \item Policies and institutions that promote economic growth\smallskip
+        \item Economic effects of fiscal and monetary policy\smallskip
+        \item ...\smallskip
+    \end{itemize}
+    \item[3.] Forecasting\smallskip
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{This course}
+\begin{itemize}
+    \item[1.] Focus on understanding how the economy works\smallskip
+    \begin{itemize}
+        \item Understand and interpret economic data\smallskip
+        \item Understand economic relationships, causality\smallskip
+    \end{itemize}
+    \item[2.] We need models\smallskip
+    \begin{itemize}
+        \item Macroeconomists' laboratories\smallskip
+    \end{itemize}
+    \item[3.] Very little focus on forecasting\smallskip
+    \item[4.] Much of our knowledge comes from economic failures and crises\smallskip
+    \begin{itemize}
+        \item We will consider specific current and historical events\smallskip
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Some examples}
+
+
+\begin{frame}{What is GDP and what does it measure?}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.94\linewidth]{GDP_se.png}
+    \flushright{\tiny{Current prices. Source: Statistics Sweden.}}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{Why do some countries grow rapidly, others not?}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.96\linewidth]{Growth.png}
+    \flushright{\tiny{Real GDP per capita, 2011 USD. Source: \href{https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023}{The Maddison Project}.}}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{Why did inflation increase so much?}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{LN00b_Intro/HICP.png} \newline
+    \flushright{\tiny{Percent annual change in HICP for Sweden and the Euro area, CPI for the United States. Sources: \href{https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_midx__custom_18023313/default/table}{Eurostat} and \href{https://fred.stlouisfed.org/series/CPIAUCSL}{FRED}.}}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{What can central banks achieve?}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.65\linewidth]{LN00b_Intro/FedDecision.png}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{Is it important that central banks are independent?}
+\centering
+\begin{tikzpicture}
+  % base image
+  \node[inner sep=0] (base) {\includegraphics[width=0.74\linewidth]{Lect00a_Literature/TrumpFiresCook.png}};
+
+  % top image, rotated and placed relative to base
+  \only<2->{
+  \node[inner sep=0, anchor=south east] 
+        at ($(base.south east)+(-1.8cm,0.3cm)$)
+        {\includegraphics[width=.3\linewidth, angle=-18, origin=c]{Figs/DJT.jpg}}
+    };
+\end{tikzpicture}\end{frame}
+
+
+\begin{frame}{Should we worry about high and growing public debt?}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{LN00b_Intro/GovernmentDebt.png} \newline
+    \flushright{\tiny{Source: \href{https://www.imf.org/en/Publications/WEO/weo-database/2025/april/select-country-group}{IMF World Economic Outlook}}}
+\end{figure}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Models and data}
+
+
+\begin{frame}{}
+\begin{quote}
+    {\large ``All theory depends on assumptions which are not quite true. That is what makes it theory. The art of successful theorizing is to make the inevitable simplifying assumptions in such a way that the final results are not very sensitive.''}
+    \vskip5mm
+    \hspace*\fill{\small--- Robert Solow}
+\end{quote}
+\end{frame}
+
+
+\begin{frame}{Why models?}
+\begin{itemize}
+    \item Simplified versions of reality\medskip
+    \item Models are economists' laboratories; once equilibrium is characterized we can conduct policy experiments\medskip
+    \item Different models serve different purposes\medskip
+    \item Impossible to incorporate all features in one model: tractability
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Modeling principles}
+\begin{itemize}
+    \item \alert{Exogenous variables}: treated as given in the analysis\smallskip
+    \item \alert{Endogenous variables}: determined within the model\smallskip
+    \item Variable of interest should be endogenously explained\smallskip
+    \item The models analyze how exogenous variables affect the endogenous variables 
+\end{itemize} \medskip \pause
+\begin{figure}
+    \centering
+    \includegraphics[width=0.55\linewidth]{LN00b_Intro/MACRO6_FIG01.06.jpg}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{Models: Agents}
+\begin{itemize}
+    \item Ideally, models should be based on the behavior of individual agents:
+    \begin{itemize}
+        \item Households maximize utility
+        \item Firms maximize profits
+    \end{itemize}\medskip
+    \item Other agents and institutions:
+    \begin{itemize}
+        \item Financial institutions\smallskip
+        \item Trade unions\smallskip
+        \item Vested interest groups (political lobbies)\smallskip
+        \item ...
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Economic policy}
+\begin{itemize}
+    \item Economic policy: government may try to influence the general equilibrium by affecting the incentives of individual agents\medskip
+    \item Government: fiscal authority + central bank\medskip
+    \item Fiscal policy: taxes, subsidies, transfers, government consumption\medskip
+    \item Monetary policy: interest rates, money supply, exchange rates
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Data}
+\begin{itemize}
+    \small{
+    \item Data and econometric techniques used for:
+    \begin{itemize}
+        \item Descriptive analysis\smallskip
+        \item Causal analysis (requires exogenous variation)\medskip
+    \end{itemize}
+
+    \item I will try to provide links to useful data sources along the course \medskip
+    
+    \item Some very useful sources for macro data:
+    }
+    \begin{itemize}
+    \footnotesize{
+        \item International organizations: \href{https://data-explorer.oecd.org/}{OECD Data Explorer}; \href{https://www.imf.org/en/Publications/SPROLLs/world-economic-outlook-databases}{IMF World Economic Outlook}; \href{https://data.worldbank.org/}{the World Bank}; \href{https://www.bis.org/statistics/dataportal/}{BIS}\smallskip
+        \item Statistical agencies: \href{https://www.statistikdatabasen.scb.se/pxweb/en/ssd/}{Statistics Sweden}; \href{https://ec.europa.eu/eurostat/data/database}{Eurostat}; \href{https://www.bls.gov/data/}{Bureau of Labor Statistics} \smallskip
+        \item Private initiatives: \href{https://www.rug.nl/ggdc/productivity/pwt/}{Penn World Tables} (annual macro data 1950-2019 for 183 countries; \href{https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023}{the Maddison Project} (very long time series on growth and income)  \smallskip
+        \item Central banks: \href{https://www.riksbank.se/en-gb/statistics/}{Riksbank} (e.g. interest rates and exchange rates); \href{https://data.ecb.europa.eu/data/datasets}{ECB} (a lot of European financial data); \href{https://fred.stlouisfed.org}{St Louis Fed's FRED database} (mostly U.S. macro and financial data, very user-friendly!)
+        }
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+
+\end{document}
+
+
