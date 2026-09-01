@@ -1,0 +1,813 @@
+\documentclass[10pt,handout]{beamer}
+
+\input{EC2211_preamble.txt}
+\title{Lecture Notes 2 \newline Economic Growth and the Solow Model}
+
+\begin{document}
+
+\maketitle
+
+
+\begin{frame}
+    \frametitle{Contents and literature}
+    \begin{itemize}
+        \item The production function
+        \item Growth accounting
+        \item The Solow model
+    \end{itemize}\bigskip
+    Literature: 
+    \begin{tightitemize}
+        \item Jones (2024) chapters 3-5
+    \end{tightitemize}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Production}
+
+
+\begin{frame}{The production function}
+    \begin{block}{The Cobb Douglas production function}
+        $Y = F(K,L) = A K^\alpha L^{1-\alpha}$
+    \end{block} \bigskip
+    
+    \begin{table}
+        \flushleft
+        \begin{tabular}{rl}
+            $Y$ & = output, GDP \\
+            $F(.,.)$ & = production function \\
+            $A$ & = total factor productivity (TFP)\\
+            $K$ & = capital input \\
+            $L$ & = labor input \\
+            $\alpha$ & = capital share in production, $\alpha \in (0,1)$ \\
+        \end{tabular}
+    \end{table}
+\end{frame}
+
+
+\begin{frame}{Math repetition: derivatives}
+Let $y=f(x)$ \par \medskip
+The derivative of $y$ with respect to $x$ is written
+\begin{equation*}
+    \frac{\d{y}}{\d{x}}=\frac{\d{f(x)}}{\d{x}}=f'(x)
+\end{equation*} \medskip
+\end{frame}
+
+
+\begin{frame}{Math repetition: derivatives}
+    Let $y=f(x_1,x_2)$ \bigskip
+
+    The derivatives of $y$ with respect to its arguments, $x_1$ and $x_2$, are written:
+    \begin{equation*}
+        \frac{\partial y}{\partial x_1}=\frac{\partial f(x_1,x_2)}{\partial x_1}=f'_{x_1}(x_1,x_2)
+    \end{equation*}
+    and
+    \begin{equation*}
+        \frac{\partial y}{\partial x_2}=\frac{\partial f(x_1,x_2)}{\partial x_2}=f'_{x_2}(x_1,x_2)
+    \end{equation*}
+\end{frame}
+
+
+\begin{frame}{Math repetition: derivatives}
+    Recall that if $y=f(x)=x^\alpha$, then $f'(x)=\alpha x^{\alpha-1}$ \bigskip
+
+    Examples: 
+    \begin{itemize}
+        \item If $f(x)=x+0.5x^2-x^4 $, then $f'(x)=1+x-4x^3$
+        \item If $f(x_1,x_2)=x_1^\alpha x_2^{1-\alpha}$, then $f'_{x_1}(x_1,x_2) = \alpha x_1^{\alpha-1} x_2^{1-\alpha}$
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{The production function}
+\small{
+    \begin{itemize}
+        \item How much does production increase if we increase capital but hold labor constant?
+        \item[] The marginal product of capital, $MPK$:
+    \end{itemize}
+    \[
+    MPK = \frac{\partial Y}{\partial K} = \frac{\partial F(K,L)}{\partial K}= F_{K}
+    \]
+\bigskip
+
+    \begin{itemize}
+        \item How much does production increase if we increase labor but hold capital constant?
+        \item[] The marginal product of labor, $MPL$:
+    \end{itemize}
+    \[
+    MPL = \frac{\partial Y}{\partial L} = \frac{\partial F(K,L)}{\partial L}= F_{L}
+    \]   
+}
+\end{frame}
+
+
+\begin{frame}{Constant returns to scale}
+    Consider again the Cobb-Douglas production function:
+    \[
+        Y=AK^\alpha L^{1-\alpha}
+    \] 
+
+    If all production factors are increased by a factor x, production also increases by factor x:
+    \[
+        F(xK, xL)=A(xK)^\alpha (xL)^{1-\alpha} = A x^{(\alpha+1-\alpha)}K^\alpha L^{1-\alpha}= xF(K,L)
+    \] \pause
+
+    \begin{itemize}
+        \item If, for example, $F(K,L) = 10$ then $F(3K,3L) = 30$
+        \item A function with this property is said to display \mfemph{constant returns to scale}
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Diminishing marginal products}
+\small{
+    We still consider the Cobb-Douglas production function $Y=AK^\alpha L^{1-\alpha}$ \medskip
+
+    The marginal products of capital and labor are
+    \[
+        MPK=\alpha AK^{\alpha-1} L^{1-\alpha} = \alpha A \left( \frac{L}{K} \right) ^{1-\alpha},
+    \]
+    and
+    \[
+        MPL=(1-\alpha) AK^\alpha L^{-\alpha} = (1-\alpha) A \left( \frac{K}{L} \right) ^\alpha
+    \] \medskip
+
+    \begin{itemize}
+        \item If we increase $K$ but hold $L$ constant, production will increase but less and less as $K$ becomes larger
+        \item If we increase $L$ but hold $K$ constant, production will increase but less and less as $L$ becomes larger
+        \item The production function displays \mfemph{diminishing marginal products}
+    \end{itemize}
+}
+\end{frame}
+
+
+\begin{frame}{Diminishing marginal product of capital}
+    \begin{figure}
+        \includegraphics[scale=0.4]{LN02_Production_and_Solow/MACRO6_FIG04.01.jpg}
+    \end{figure} \medskip
+    \flushright \tiny Figure 4.1 in Jones (2024)
+\end{frame}
+
+
+\begin{frame}{Math repetition: profit maximization}
+\begin{columns}
+    \column{0.6\textwidth}
+    \small{
+    \begin{itemize}
+        \item Consider a function $f(x)$
+        \item Recall that $f'(x)$ is the slope of $f$ in point $x$
+        \item If some $x^*$ is maximizes the function, then $f'(x^*)=0$
+        \item This is the \mfemph{first-order condition} (f.o.c.)
+        \item \footnotesize{(But note that the same holds for a minimum; the f.o.c. is a \emph{necessary} but not sufficient condition)}
+    \end{itemize}
+    }
+
+    \column{0.4\textwidth}
+    \begin{figure}
+        \centering
+        \includegraphics[width=1\linewidth]{LN02_Production_and_Solow/fx.png}
+    \end{figure}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{Profit maximization under Cobb-Douglas}
+    Competitive firms choose capital and labor to maximize profits:
+    \begin{equation*}
+        \max_{K,L} \Pi(K,L) =\underbrace{AK^\alpha L^{1-\alpha}}_{F(K,L)}-rK-wL
+    \end{equation*}
+
+    where $\Pi$ denotes the profit function, $w$ the wage and $r$ the rental rate of capital
+    \bigskip
+
+    First-order conditions for profit maximization:
+    \begin{equation} \label{focK}
+        \frac{\partial \Pi}{\partial K} = \underbrace{\alpha AK^{\alpha-1} L^{1-\alpha}}_{MPK}-r=0
+    \end{equation}
+    \begin{equation} \label{focL}
+        \frac{\partial \Pi}{\partial L} = \underbrace{(1-\alpha) AK^{\alpha} L^{-\alpha}}_{MPL}-w=0
+    \end{equation}
+\end{frame}
+
+
+\begin{frame}{The demand for capital and labor}
+    Re-arranging \eqref{focK}:
+    \begin{equation} \label{MPK}
+        MPK=\alpha A K^\alpha L^{(1-\alpha)} K^{-1}=\alpha \frac{Y}{K}=r
+    \end{equation}
+    
+    Re-arranging \eqref{focL}:
+    \begin{equation} \label{MPL}
+        MPL= (1-\alpha) A K^\alpha L^{(1-\alpha)} L^{-1} = (1-\alpha)\frac{Y}{L}=w
+    \end{equation}
+\end{frame}
+
+
+\begin{frame}{Equilibrium in the capital and labor markets}
+    \begin{figure}
+        \includegraphics[scale=0.4]{MACRO6_FIG04.02.jpg}
+    \end{figure} \medskip
+    \flushright \tiny Figure 4.2 in Jones (2024)
+\end{frame}
+
+
+\begin{frame}{}
+    Note that \eqref{MPK} and \eqref{MPL} imply:
+    \begin{equation*}
+        \alpha=\frac{rK}{Y}
+    \end{equation*}
+
+    and
+
+    \begin{equation*}
+        1-\alpha=\frac{wL}{Y}
+    \end{equation*}\bigskip
+
+    Jones (2024) assumes that $\alpha=1/3$. Why?
+\end{frame}
+
+
+
+\begin{frame}{Labor's share of GDP ($1-\alpha$)}
+    \begin{figure}
+        \includegraphics[scale=0.4]{MACRO6_FIG02.03.jpg}
+    \end{figure}
+    \flushright \tiny Figure 2.3 in Jones
+\end{frame}
+
+
+\begin{frame}{Labor's share of GDP}
+\small{
+\begin{itemize}
+    \item Macroeconomists often say that the labor's share of GDP in the United States has been roughly constant at around $2/3$ for the last century \pause
+    
+    \item Data for the U.S. and many other countries however indicate that the labor's share has declined somewhat since the 1980s (see previous slide and \href{https://www.clevelandfed.org/-/media/project/clevelandfedtenant/clevelandfedsite/publications/economic-commentary/2018/ec-201808-evolution-of-the-labor-share-across-developed-countries/ec_201808.pdf}
+    {this note})
+    \begin{tightitemize}
+        \item The reasons behind this fall are not obvious
+        \item Separating compensation to labor from compensation to capital owners is not always trivial
+    \end{tightitemize} \pause
+    
+    \item Sweden may be an exception (has no clear trend)
+    \begin{tightitemize}
+        \item See next slide and \href{https://ekonomistas.se/2024/01/17/konjunkturinstitutet-replik-om-vinstandelens-utveckling/}{this blog post}
+        \item[] \footnotesize{(The slide and the blog post are in Swedish. Some translations: "vinstandelar" = "profit shares", "hela ekonomin" = "total economy", "näringslivet" = "private sector")}
+    \end{tightitemize}
+\end{itemize}
+}
+\end{frame}
+
+
+\begin{frame}{Capital's share of GDP, Sweden ($\alpha$)}
+\begin{figure}
+  \includegraphics[scale=0.24]{LN02_Production_and_Solow/profitshare_se.png}
+\end{figure}
+\flushright{\tiny Source: \href{https://ekonomistas.se/2024/01/17/konjunkturinstitutet-replik-om-vinstandelens-utveckling/}{ekonomistas.se}}
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Growth accounting}
+
+
+\begin{frame}{Growth accounting}
+    Can we use the production function to "explain" why some countries are so much richer than others? \pause \medskip
+
+    \begin{itemize}
+        \item Consider our Cobb-Douglas production function:
+        \[
+            Y_t = A_t K_t^\alpha L_t^{1-\alpha}
+        \]
+
+        \item Apply the rules for growth rates:
+        \[
+            g_{Y} = g_{A} + \alpha g_{K} + (1-\alpha) g_{L}
+        \]
+    
+        \item This shows that the growth rate of output is the sum of TFP growth and (weighted) growth of the production factors \smallskip
+
+        \pause\item We can observe or estimate $Y_t$, $K_t$, $L_t$ and $\alpha$ in the data \smallskip
+    
+        \item Growth in TFP is then calculated as the residual
+        \[
+            g_{A} = g_{Y} - \alpha g_{K} - (1-\alpha) g_{L}
+        \]
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Income per capita}
+
+    Cross-country comparisons require expressions in per-capita terms\bigskip
+
+    Recall the production function $Y=A K^\alpha L^{1-\alpha}$ and divide by $L$:
+    \begin{equation*}
+        y \equiv \frac{Y}{L}=\frac{AK^\alpha L^{1-\alpha}}{L}=A K^\alpha L^{-\alpha}=Ak^\alpha,
+    \end{equation*}
+    where $y=Y/L$ and $k \equiv K/L$ denote GDP and capital per person ("per capita"), respectively
+\end{frame}
+
+\begin{frame}{Growth accounting} 
+    In per capita terms, production is
+        \[ y_t = A_t k_t^\alpha \]
+    so:
+    \[
+        g_{y} = g_{A} + \alpha g_{k}
+    \] \medskip
+
+    If we compare country $i$ to the United States:
+    \[
+        \frac{y_i}{y_{US}} = \frac{A_i k_i^\alpha}{A_{US} k_{US}^\alpha} = \left( \frac{A_i}{A_{US}} \right) \left( \frac{k_i}{k_{US}} \right) ^\alpha
+    \]
+\end{frame}
+
+
+
+
+
+\begin{frame}{Predicted per capita GDP}
+\begin{itemize}
+    \item Suppose $y=Ak^{1/3}$ and that $A$ is the same as in the United States in all countries
+    \bigskip
+    \item Actual differences in production are much larger than predicted by differences in capital input {\tiny (see next two slides!)}
+    \bigskip
+    \item If this is the production function, much of differences in GDP per capita must be attributed to differences in TFP
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Predicted per capita GDP relative to the U.S. if $y=k^{1/3}$}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.79\linewidth]{MACRO6_Table04.03_box.jpg}
+    \end{figure} \pause
+
+    \footnotesize{
+    \begin{tightitemize}
+        \item Consider, for example, China: the table shows that $k^{China}/k^{USA} = 0.275$
+        \item If $y=k^{1/3}$, then $y_{China}/y_{US} = (k_{China}/k_{US})^{1/3} = 0.275^{1/3} = 0.650 $
+        \item Actual GDP per capita in China is just 22.6 percent of GDP per capita in the United States
+    \end{tightitemize}
+    }
+\end{frame}
+
+
+\begin{frame}{Predicted per capita GDP}
+\begin{figure}
+  \includegraphics[scale=0.30]{Fig_implied_gdp.png}
+  \caption{\tiny{This graph shows similar information as the table on the previous page but for more countries. Horizontal axis: Actual GDP per capita in 2019 (2017 USD) from PWT 10.01. Vertical axis: Predicted GDP per capita according to $Ak^{1/3}$ where $A$ is based on the U.S. value and $k$ calculated from PWT with the same method as Jones. Ireland and Qatar were dropped from sample.}}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{Much more differences in GDP per capita than in capital per capita}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.5\linewidth]{WorldBank2024.png}
+    \end{figure}
+    \flushright \tiny{Figure O.2 in \href{https://bit.ly/WDR2024_FullReport_ENG}{World Bank (2024)}}
+\end{frame}
+
+
+\begin{frame}{If capital is the only production factor, TFP in most other countries must be much lower than in the U.S. to match the data}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.85\linewidth]{MACRO6_Table04.04_box.jpg}
+    \end{figure}
+    \flushright \tiny{Table 4.4 in Jones}
+\end{frame}
+
+
+\begin{frame}{Why does TFP differ across countries?}
+\begin{itemize}
+    \item The accounting exercise in Jones (2024) suggests that $A$ is twice as important as $k$ in explaining cross-country differences in $y$ \bigskip
+    
+    \item Why does TFP differ across countries? \smallskip
+    \begin{tightitemize}
+        \item (Labor input)\smallskip
+        \item Human capital\smallskip
+        \item Technology\smallskip
+        \item Institutions\smallskip
+        \item Misallocation
+    \end{tightitemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Another indication of the importance of TFP}
+\begin{itemize}
+    \item Suppose that all countries have identical production functions $Y=AK^\alpha L^{1-\alpha}$ and identical $A$ \smallskip
+
+    \item Suppose that physical capital can move freely between countries\smallskip
+
+    \item Then capital should flow from rich to poor countries because the MPK would then be much higher in poor countries {\footnotesize (\href{https://www.jstor.org/stable/2006549}{Robert Lucas, 1990, "Why doesn't capital flow from rich to poor countries"})} \smallskip
+
+    \item The current account balance shows capital flows: $CA=S-I$
+    \begin{tightitemize}
+        \item A negative current account balance means that capital flows to the country (investment is larger than saving)
+        \item There is some tendency for capital to flow to poor countries
+        \item But not at all to the extent this "model" predicts
+    \end{tightitemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Some tendency for capital to flow from rich to poor countries in 2010s}
+\begin{figure}
+  \includegraphics[scale=0.15]{Fig_capitalflows_2010_2019.png}
+\end{figure}
+\tiny Averages for 2010-2019. Current account balance in percent of GDP. GDP per capita relative to USA. Source: IMF WEO.
+\end{frame}
+
+
+\begin{frame}{Modest capital flows in 1980s}
+\begin{figure}
+  \includegraphics[scale=0.15]{Fig_capitalflows_1980_1989.png}
+\end{figure}
+\tiny Averages for 1980-1989. Current account balance in percent of GDP. GDP per capita relative to USA. Source: IMF WEO.
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The Solow model}
+
+
+\begin{frame}{The Solow model}
+\begin{itemize}
+    \item The production function is the key ingredient\medskip
+
+    \item Does capital accumulation generate growth?\medskip
+
+    \item A key model for\smallskip
+    \begin{tightitemize}
+        \item ... understanding economic growth and its limitations\smallskip
+        \item ... but also a building stone for much other macroeconomic analysis
+    \end{tightitemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{The Solow model}
+\begin{columns}
+    \column{0.6\textwidth}
+    \begin{itemize}
+    \item Solow (1956), "A Contribution to the Theory of Economic Growth"\medskip
+
+    \item \href{https://www.nobelprize.org/prizes/economic-sciences/1987/solow/facts/}{Nobel prize 1987}: \small{"The study of the factors which permit production growth and increased welfare has been a central feature in economic research for many years. Robert M. Solow’s prize recognizes his exceptional contributions in this area."}
+    \end{itemize}
+
+    \column{0.4\textwidth}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.9\linewidth]{solow-13390-portrait-mini-2x.jpg}
+    \end{figure}
+    \centering \small{Robert Solow 1924-2023}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{Notation}
+\begin{itemize}
+    \item[] $Y_t$: output at time $t$
+    \item[] $A$: total factor productivity (TFP)
+    \item[] $K_t$: the capital stock at time $t$
+    \item[] $L_t$: labor input at time $t$
+    \item[] $I_t$: investment at time $t$
+    \item[] $C_t$: consumption at time $t$ 
+    \item[] $K_0$: initial stock of capital
+    \item[] $\delta$: the depreciation rate of capital\footnote{\tiny{Jones uses $\overline{d}$ to denote the depreciation rate, but $\delta$ is a much more common notation }}
+    \item[] $s$: savings rate
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Production}
+    Production is a function of the two production factors, capital and labor:
+    \begin{equation} \label{eq1}
+        Y_t=F(K_t, L_t)
+    \end{equation}\smallskip
+
+    We assume that the production function exhibits \emph{constant returns to scale} and \emph{diminishing marginal products of capital and labor}.
+    \smallskip
+    Closed-economy resource constraint: 
+    \begin{equation} \label{eq2}
+        C_t+I_t=Y_t
+    \end{equation}
+\end{frame}
+
+
+\begin{frame}{Capital accumulation}
+    Capital in period $t+1$ is determined by:
+    \begin{equation} \label{eq3}
+        K_{t+1}=K_t+I_t-\delta K_t
+    \end{equation} \smallskip
+
+    Equation \eqref{eq3} can be re-arranged to read:
+    \begin{equation} \label{eq4}
+        \Delta K_{t+1}= \underbrace{I_t - \delta K_t}_{\text{net investment}}
+    \end{equation}
+    where $\Delta K_{t+1} \equiv K_{t+1}-K_t$\medskip
+
+    In each period $t>0$, $K_t$ results from previous investment and depreciation\smallskip
+
+    To get the model started, an initial value for $K_0$ is needed
+\end{frame}
+
+
+\begin{frame}{Consumption and investment}
+    Assume that a constant fraction of income is saved (and invested):
+    \begin{equation} \label{eq5}
+        I_t=sY_t
+    \end{equation}\smallskip
+
+    This implies that consumption is:
+    \begin{equation} \label{eq6}
+        C_t=(1-s)Y_t
+    \end{equation}
+\end{frame}
+
+
+\begin{frame}{Solving the model}
+    Assume for now that there is no population growth so that labor input is also constant over time, $L_t=L$, and we also assume that TFP is constant over time, $A_t=A$  \bigskip
+
+    Equations \eqref{eq4}, \eqref{eq5} and \eqref{eq1} imply:
+    \begin{equation} \label{eq7}
+        \Delta K_{t+1}= sF(K_t,L) - \delta K_t
+    \end{equation}
+\end{frame}
+
+
+\begin{frame}{Cobb-Douglas production function}
+    Assume that the production function is Cobb-Douglas: 
+    \begin{equation} 
+        Y_t=A K_t^\alpha L^{1-\alpha}
+    \end{equation} \smallskip
+
+    \begin{itemize}
+    \item Recall that the marginal product of capital is then diminishing:
+    \begin{tightitemize}
+        \item We have assumed that labor input is fixed
+        \item Plotted against capital, $Y$ and $sY$ will have the concave shape we saw previously
+    \end{tightitemize}
+    \item Depreciation, $\delta K$, is however \emph{linear}
+    \item The change in the capital stock from one period to the next is investment minus depreciation, i.e. the difference between $sY$ and $\delta K$
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{The Solow Diagram}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.85\linewidth]{SolowDiagram1.png}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}{Steady state}
+    \begin{block}{Steady state}
+        In a steady state, all variables are constant
+    \end{block} \bigskip \pause
+
+    If capital is constant, then $K_{t+1}=K_t$, i.e. $\Delta K_{t+1}=0$ \bigskip
+
+    Equation \eqref{eq7} implies that the steady-state level of capital $K^{*}$ must satisfy: 
+    \begin{equation} \label{eq8}
+        sY^* = sF(K^{*},L)=\delta K^{*}
+    \end{equation}
+    where $Y^*$ is steady-state output
+\end{frame}
+
+
+\begin{frame}{Steady state under Cobb-Douglas}
+    We assume that the production function is Cobb-Douglas, 
+    \begin{equation} \label{eq9}
+        Y_t=A K_t^\alpha L^{1-\alpha}
+    \end{equation} \smallskip
+
+    Equation \eqref{eq8}, $sY^*=\delta K^*$, then implies that
+    \begin{equation*}
+        sA (K^{*})^\alpha L^{1-\alpha} = \delta K^{*}
+    \end{equation*}
+\end{frame}
+
+
+\begin{frame}{Steady state under Cobb-Douglas}
+    Solving for $K^{*}$: 
+    \begin{equation} \label{eq10}
+        K^{*}=\bigg( \frac{sA}{\delta} \bigg)^{\frac{1}{1-\alpha}} L
+    \end{equation} \smallskip
+
+    Plugging \eqref{eq10} into \eqref{eq9} yields steady-state output:
+    \begin{equation} \label{eq11}
+        Y^{*} = A^{\frac{1}{1-\alpha}} \bigg( \frac{s}{\delta} \bigg)^{\frac{\alpha}{1-\alpha}} L
+    \end{equation}
+\end{frame}
+
+
+\begin{frame}{Steady-state capital and output per worker}
+    Dividing \eqref{eq10} by $L$ we obtain steady-state capital per worker: 
+    \begin{equation} \label{eq12}
+        k^{*} \equiv \frac{K^{*}}{L} = \bigg( \frac{sA}{\delta} \bigg)^{\frac{1}{1-\alpha}}
+    \end{equation} \smallskip
+
+    Dividing \eqref{eq11} by $L$ we obtain steady-state output per worker: 
+    \begin{equation} \label{eq13}
+        y^{*} \equiv \frac{Y^{*}}{L} = A^{\frac{1}{1-\alpha}} \bigg( \frac{s}{\delta} \bigg)^{\frac{\alpha}{1-\alpha}}
+    \end{equation}
+\end{frame}
+
+
+\begin{frame}{The Solow Diagram}
+    \begin{figure}
+        \includegraphics[scale=0.4]{MACRO6_FIG05.01.jpg}
+    \end{figure} \medskip
+    \flushright \tiny Figure 5.1 in Jones (2024)
+\end{frame}
+
+
+\begin{frame}{The Solow Diagram with output}
+    \begin{figure}
+        \includegraphics[scale=0.4]{MACRO6_FIG05.02.jpg}
+    \end{figure} \medskip
+    \flushright \tiny Figure 5.2 in Jones (2024).
+\end{frame}
+
+
+\begin{frame}{Exercise: Where is the steady state? (Poverty trap?)}
+    \begin{figure}
+        \includegraphics[scale=0.48]{PovertyTrap2.png}
+    \end{figure}
+    \tiny Note that this production function is non-standard and not Cobb Douglas -- we use it here just to illustrate how investment and depreciation determine the dynamics of the capital stock
+\end{frame}
+
+
+\begin{frame}{Some model implications}
+\begin{itemize}
+    \item More capital accumulation (higher $s$) leads to higher income but not to sustained growth\bigskip
+
+    \item Why does the economy reach a steady state?
+    \begin{tightitemize}
+        \item Diminishing returns to capital, but depreciation is proportional to capital
+        \item In the steady state, investment is just offset by capital depreciation
+    \end{tightitemize} \bigskip
+
+    \item The capital-output ratio in steady state is proportional to the savings rate \bigskip
+
+    \item The savings rate can be inefficiently high ("Golden Rule", see exercise)
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{An increase in the investment rate}
+\pause
+    \begin{figure}
+        \includegraphics[scale=0.4]{MACRO6_FIG05.05.jpg}
+    \end{figure} \medskip
+    \flushright \tiny Figure 5.5 in Jones (2024)
+\end{frame}
+
+
+\begin{frame}{Capital-output ratio and savings}
+    Recall that equation \eqref{eq8} predicts $sY^{*}=\delta K^{*}$, so that:
+    \begin{equation} \label{eq14}
+        \frac{K^{*}}{Y^{*}} = \frac{s}{\delta}
+    \end{equation}
+
+    \bigskip
+
+    Idea: plot capital-income ratios against investment rates
+\end{frame}
+
+
+\begin{frame}{"Explaining" capital in the Solow model}
+    \begin{figure}
+        \includegraphics[scale=0.3]{MACRO6_FIG05.03.jpg}
+    \end{figure}
+    \flushright  \tiny {Figure 5.3 in Jones (2024)}
+\end{frame}
+
+
+\begin{frame}{Capital-output ratio and savings}
+    \begin{itemize}
+        \item Figure 5.3 looks like very strong support for the model in the data\medskip
+        \item But how do we measure capital stocks?\medskip
+        \pause
+        \item Typically measured indirectly from investment rates\medskip
+        \item Jones assumes that $\delta=0.05$ and calculates
+        \begin{tightitemize}
+            \item $K_{1960}=K^*$
+            \item $K_{1961}=(1-\delta)K_{1960}+I_{1960}$, etc
+        \end{tightitemize}
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Transition dynamics}
+\begin{itemize}
+    \item No long-run growth in this version of the Solow model: the economy settles down at $K^{*}$ and $Y^{*}$
+
+    \item But countries can grow temporarily during transitions to steady states
+    \begin{tightitemize}
+        \item If $K_t<K^{*}$ the growth rate will be positive
+        \item If $K_t>K^{*}$ the growth rate will be negative
+        \item The further from the steady state, the larger the (absolute value of) growth rates
+    \end{tightitemize}
+
+    \item The growth that we observe may be due to shocks that cause deviations from steady states, or to shifts in steady states
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Transitional dynamics, convergence}
+\begin{itemize}
+    \item Suppose that countries have similar production functions \& similar TFP \medskip
+    \begin{tightitemize}
+        \item They then have similar steady states
+        \item But maybe some (the "poor") just have little capital
+        \item Poor countries are then far from steady state, should grow rapidly
+    \end{tightitemize} \medskip
+    \item What does the data say?
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Growth rates in the OECD, 1960-2019}
+    \begin{figure}
+        \includegraphics[scale=0.35]{MACRO6_FIG05.08.jpg}
+    \end{figure}
+    \flushright \tiny Figure 5.8 in Jones (2024)
+\end{frame}
+
+
+\begin{frame}{Growth rates around the world, 1960-2019}
+    \begin{figure}
+    \includegraphics[scale=0.35]{MACRO6_FIG05.09.jpg}
+    \end{figure}
+    \flushright \tiny Figure 5.9 in Jones (2024)
+\end{frame}
+
+
+\begin{frame}{Convergence}
+\begin{itemize}
+    \item Clear evidence of convergence among OECD countries since 1960\medskip
+    \item Less clear evidence of convergence in larger sample of countries\medskip
+    \item Possible interpretation: 
+    \begin{tightitemize}
+        \item OECD countries are similar and have similar steady-states
+        \item But this is not the case for other economies; they may be close to their steady-states
+    \end{tightitemize}\medskip
+    \item Convergence vs. conditional convergence
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{South Korea and the Philippines 1960-2019}
+\footnotesize{
+\begin{table}
+        \centering
+        \begin{tabular}{L{2cm}C{2cm}C{2cm}C{2.5cm}}
+         &GDP per capita relative to USA 1960&GDP per capita relative to USA 2019&Increase in GDP per capita 1960-2019 (percent)\\
+         \hline
+         USA& 1.00 &1.00&228\\
+         Philippines& 0.11&0.13&317\\
+         Korea&0.07&0.67&3261\\
+    \end{tabular}
+\end{table}
+} \bigskip \pause
+
+\normalsize {Can the Solow model explain why growth was so much more rapid in Korea than in the Philippines?}
+\end{frame}
+
+
+\begin{frame}{Case study: South Korea and the Philippines 1960-2019}
+    \begin{figure}
+        \includegraphics[scale=0.42]{MACRO6_FIG05.10_box.jpg}
+    \end{figure}
+    \flushright \tiny Figure 5.10 in Jones (2024)
+\end{frame}
+
+
+\begin{frame}{Summing up}
+\begin{itemize}
+    \item We have analyzed the basic Solow model with constant $L$ and $A$\medskip
+    \item The model shows that capital accumulation:
+    \begin{tightitemize}
+        \item can generate transitional growth
+        \item cannot generate sustained growth
+        \item can be inefficiently high (exercise)
+    \end{tightitemize}\medskip
+    \item Taking the model to the data, much cross-country variation remains unexplained\medskip
+    \item Next time: population growth, productivity, human capital, natural resources, ... 
+\end{itemize}
+\end{frame}
+
+\end{document}
+
+
