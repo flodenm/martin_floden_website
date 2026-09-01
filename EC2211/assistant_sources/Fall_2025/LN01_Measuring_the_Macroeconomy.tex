@@ -1,0 +1,854 @@
+% COURSE-ASSISTANT SOURCE — FALL 2025 ARCHIVE
+% This material is not authoritative for Fall 2026; current-course material
+% takes priority. See LN01_figure_notes.md for figures not stored here.
+\documentclass[10pt]{beamer}
+
+\input{EC2211_preamble.txt}
+\title{Lecture Notes 1 \newline Measuring the Macroeconomy}
+
+
+\begin{document}
+\maketitle
+
+
+\begin{frame}{Contents and literature}
+\begin{itemize}
+\item Measuring the macroeconomy
+\item Mathematical preliminaries: logarithms and growth rates
+\item Growth facts
+\bigskip
+\end{itemize} \medskip
+
+Literature:
+\small{
+\begin{tightitemize}
+    \item Jones (2024), chapters 1-3 and 6.5
+\end{tightitemize}
+}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Measuring the macroeconomy}
+
+\begin{frame}{What is GDP and what does it measure?}
+\begin{columns}
+    \column{0.35\textwidth}
+    \small{
+    \begin{itemize}
+         \item Consider this graph
+        \item What do we need to know to make it "interesting"?
+    \end{itemize}
+    \bigskip
+    }
+    \column{0.65\textwidth}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.94\linewidth]{Lect00a_Literature/GDP_se.png}
+        \flushright{\tiny{Current prices. Source: Statistics Sweden.}}
+    \end{figure}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{GDP}
+\begin{block}{GDP = Gross Domestic Product}
+    The value of all final goods and services produced in an economy over a certain period
+\end{block}
+\bigskip
+\small{
+\begin{itemize}
+    \item National accounts, developed since 1930's, international standards in the \href{https://unstats.un.org/unsd/nationalaccount/sna2025.asp}{United Nation's System of National Accounts}
+    \item Three approaches: expenditure = income = production
+\end{itemize}
+}
+\end{frame}
+
+
+\begin{frame}{Expenditure approach}
+\begin{block}{The National Income Identity}
+    $Y = C + I + G + EX - IM$
+\end{block}
+\bigskip
+
+\begin{table}
+    \flushleft
+    \begin{tabular}{rl}
+         $Y$ & = GDP \\
+         $C$ & = consumption \\
+         $I$ & = investment \\
+         $G$ & = government purchases \\
+         $EX$ & = exports \\
+         $IM$ & = imports \\
+         \textcolor{gray}{$NX$} & \textcolor{gray}{= $EX - IM = $ net exports $=$ "trade balance"} \\
+    \end{tabular}
+\end{table} \medskip
+\end{frame}
+
+
+\begin{frame}{Example 1}
+\begin{itemize}
+    \item Homer and Marge grow 100 oranges \medskip
+    \item ... sell to Edna, \$0.5 each \medskip
+    \item If Edna eats all oranges:
+    \begin{itemize}
+        \item[]$Y = C = \$50$
+    \end{itemize} \medskip
+    \item If Edna eats 90 oranges and save 10 for next period:
+    \begin{itemize}
+        \item $C = \$45$ and $I = \$5$ (the increase in inventory is counted as an investment)
+        \item Again $Y = C + I = \$50$
+    \end{itemize} 
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Example 2}
+\begin{itemize}
+    \item Homer and Marge grow 100 oranges
+    \item ... sell to Moe, \$0.3 each
+    \item ... Moe sells to Edna, \$0.5 each
+    \item Only \emph{final} expenditure counts, so $Y = C = \$50$
+    \item (Alternatively, you can think of Moe as first making a positive investment when buying oranges, then disinvesting when selling the oranges)
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{LN01_Measuring_the_economy/GDP_SE_ExpApproach.png}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{Expenditure approach to Swedish GDP in 2023}
+\begin{columns}
+\column{0.35\textwidth}
+\small{
+\begin{itemize}
+    \item Consumption here refers to household consumption
+    \item Investment here refers to private investment...
+    \item ... and includes changes in inventories
+\end{itemize}
+\bigskip
+}
+
+\column{0.65\textwidth}
+\footnotesize{
+\begin{table}
+    \centering
+    \begin{tabular}{lrr}
+    & SEK bn & \% of GDP \\
+    \hline
+     Gross domestic product  & 6,143 & 100 \\
+     Consumption   & 2,798 & 46\\
+     Investment & 1,241 & 20 \\
+     Government purchases & 1,935 & 31 \\
+     Net exports & 170 & 3 \\
+     \emph{. exports} & \emph{3,391} & \emph{55} \\
+     \emph{. imports} & \emph{3,220} & \emph{52} \\
+     \hline
+     \multicolumn{3}{l}{\footnotesize{Source: \href{https://www.statistikdatabasen.scb.se/pxweb/en/ssd/START__NR__NR0103__NR0103E/NR0103ENS2010T01NA/}{Statistics Sweden}}}
+    \end{tabular}
+\end{table}
+}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{Income approach}
+\begin{block}{}
+GDP = "wages" + "profits"
+\end{block}
+\bigskip
+
+\begin{itemize}
+    \item "Wages" = compensation to workers
+    \item "Profits" = compensation to capital owners (interest payments, dividends)
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Example 1}
+\begin{itemize}
+    \item Homer and Marge grow 100 oranges \medskip
+    \item ... sell to Edna, \$0.5 each \medskip
+    \item GDP = Homer and Marge's income = \$50
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Example 2}
+\begin{itemize}
+    \item Homer and Marge grow 100 oranges \medskip
+    \item ... sell to Moe, \$0.3 each \medskip
+    \item ... Moe sells to Edna, \$0.5 each \medskip
+    \item GDP = Homer and Marge's income + Moe's profit = \$30 + \$20 = \$50
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Income approach to Swedish GDP in 2023}
+\footnotesize{
+\begin{table}
+    \centering
+    \begin{tabular}{lrr}
+    & SEK bn & \% of GDP \\
+    \hline
+     Gross domestic product  & 6,143 & 100 \\
+     Compensation of employees & 2,938 & 48 \\
+     \emph{. wages and salaries} & \emph{2,426} & \emph{39} \\
+     \emph{. employers' social contributions} & \emph{511} & \emph{8} \\
+     Operating surplus and mixed income & 1,980 & 32 \\
+     Taxes on production and imports less subsidies & 1,225 & 20 \\
+     \hline
+     \multicolumn{3}{l}{\footnotesize{Source: \href{https://ec.europa.eu/eurostat/databrowser/explore/all/economy?lang=en&subtheme=na10.nama10.nama_10_ma&display=list&sort=category&extractionId=nama_10_gdp}{Eurostat}}}
+    \end{tabular}
+\end{table}
+\bigskip
+Note: The last row ("Taxes ...") consists mostly of VAT, import tariffs and payroll taxes. Income taxes and corporate profit taxes are \emph{not} in that item.
+}
+\end{frame}
+
+
+\begin{frame}{Production approach}
+\begin{block}{}
+GDP = sum of value added in production
+\end{block}
+\bigskip
+
+\begin{itemize}
+    \item Only "new value" generated in each production step is counted \smallskip
+    \item Consider example 2:
+    \begin{itemize}
+        \item Homer and Marge generate \$30 worth of value when they grow apples
+        \item Moe generates an additional \$20 worth of value, maybe by advertising, packaging, bringing oranges closer to customers etc
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Production approach to Swedish GDP in 2023}
+\tiny{
+\begin{table}
+    \centering
+    \begin{tabular}{lrr}
+    & SEK bn & \% of GDP \\
+    \hline
+     Gross domestic product  & 6,143 & 100 \\
+     Agriculture, forestry and fishing & 79 & 1 \\
+     Mineral extract & 38 & 1 \\
+     Manufacturing & 823 & 13 \\
+     Electricity, gas, steam and air conditioning, water supply, waste & 173 & 3 \\
+     Construction & 354 & 6 \\
+     Wholesale and retail trade & 559 & 9 \\
+     Transport and storage & 206 & 3 \\
+     Hotels and restaurants & 93 & 2 \\
+     Publishing, media, sound, telecom, programming, IT & 397 & 6 \\
+     Financial services and insurance activities & 246 & 4 \\
+     Real estate activities & 476 & 7 \\
+     Legal, accounting and activities of head offices, management consultancy & 175 &  3 \\
+     Architectural and engineering activities, R\&D & 138 &  2 \\
+     Advertising and market research, veterinary activities & 58 & 1 \\
+     Administrative and support service activities & 211 & 3 \\
+     Education & 53 & 1 \\
+     Human health, residential care, social work & 132 & 2 \\
+     Arts, entertainment, recreation and other service activities & 86 & 1 \\
+     Non-profit institutions servicing households & 67 & 1 \\
+     Government & 1,123 & 18 \\
+     Taxes on products less subsidies & 655 & 11 \\
+     \hline
+     \multicolumn{3}{l}{\tiny{Source: \href{https://www.statistikdatabasen.scb.se/pxweb/en/ssd/START__NR__NR0103__NR0103E/NR0103ENS2010T06NA/}{Statistics Sweden}}}
+    \end{tabular}
+\end{table}
+\medskip
+Note: The last row ("Taxes ...") consists mostly of VAT and import tariffs.
+}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Measuring the macroeconomy: prices and quantities}
+
+\begin{frame}{Do we produce more today or are prices just higher?}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{Lect00a_Literature/GDP_se.png}
+    \flushright{\tiny{Current prices. Source: Statistics Sweden.}}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{Prices and quantities: preliminaries}
+\small{
+\begin{itemize}
+    \item Suppose that just two goods are produced: apples and oranges \pause
+    \item Let $Q$ denote quantity and $P$ price
+    \item In year 1, $Q^A_1=Q^O_1=100$ and $P^A_1=P^O_1=1$ \pause
+    \item In year 2, $Q^A_1=100$, $Q^O_1=150$, $P^A_1=2$ and $P^O_1=1$ \medskip \pause
+    \item \emph{Nominal} GDP is then:
+    \begin{itemize} 
+        \item[] $Y^N_1=1\times 100 + 1 \times 100 = 200 $ 
+        \item[] $Y^N_2 = 2 \times 100 + 1 \times 150 = 350 $
+    \end{itemize} \medskip \pause
+
+    \item How much more do we produce in period 2? How much have prices increased? 
+\end{itemize}
+}
+\end{frame}
+
+
+\begin{frame}{Prices and quantities: preliminaries}
+\small{
+\begin{itemize}
+    \item Use prices from period 1 to calculate "real" GDP:
+    \begin{itemize}
+        \item[] $Y^{P_1}_1 = 1 \times 100 + 1 \times 100 = 200 $
+        \item[] $Y^{P_1}_2 = 1 \times 100 + 1 \times 150 = 250 $
+    \end{itemize} \pause
+    \item Use prices from period 2 to calculate "real" GDP in year 1:
+    \begin{itemize}
+        \item[] $Y^{P_2}_1 = 2 \times 100 + 1 \times 100 = 300 $
+        \item[] $Y^{P_2}_2 = 2 \times 100 + 1 \times 150 = 350 $
+    \end{itemize} \bigskip \pause
+    \item The growth rate of real GDP is then
+    \begin{itemize}
+        \item[] $\frac{Y^{P_1}_2-Y^{P_1}_1}{Y^{P_1}_1} = 25\%$ if prices from period 1 are used \medskip
+        \item[] $\frac{Y^{P_2}_2-Y^{P_2}_1}{Y^{P_2}_1} = 17\%$ if prices from period 2 are used
+    \end{itemize}
+\end{itemize}
+}
+\end{frame}
+
+
+\begin{frame}{Prices and quantities: preliminaries}
+\begin{itemize}
+    \item Not obvious in this simple example how to separate quantities from prices \medskip
+    \item These two methods are the \emph{Laspeyres} and \emph{Paasche} index methods, respectively \medskip
+    \item In the real world, things are much more complicated \medskip
+    \item Measures are note exact, methods vary between countries!
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{How do we compare "today" with "yesterday"?}
+\begin{columns}
+    \column{0.5\textwidth}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.9\linewidth]{LN01_Measuring_the_economy/1970s.png}
+    \end{figure}
+
+    \column{0.5\textwidth}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.6\linewidth]{LN01_Measuring_the_economy/2020s.png}
+    \end{figure}
+\end{columns}
+\smallskip
+\end{frame}
+
+
+\begin{frame}{Prices and quantities}
+\small{
+\begin{itemize}
+    \item Difficult to separate price changes from quality improvements \medskip
+    \item Consumption baskets change over time
+    \begin{tightitemize}
+        \item Our preferences change
+        \item New goods and services are developed
+    \end{tightitemize} \medskip
+    \item Problems are more salient when comparison is over long time periods or if price movements are large \medskip
+    \item A typical method used by statistical agencies is the \emph{chain weighted} index:
+    \begin{tightitemize}
+        \item "Average" of Laspeyres and Paasche
+        \item Chain-linked over short time-intervals 
+    \end{tightitemize}
+\end{itemize}
+}
+\end{frame}
+
+
+\begin{frame}{Nominal and real GDP: example terminology}
+\small{
+\begin{itemize}
+    \item Nominal GDP: "current prices, million SEK" \bigskip
+    \item Real GDP:
+    \begin{tightitemize}
+        \item "2015 prices, million SEK"
+        \item "Constant prices, reference year 2024, SEK million"
+        \item "Chain linked volumes, index 2010=100"
+        \item "Chain linked volumes (2010), million euro"
+    \end{tightitemize}
+\end{itemize}
+}
+\end{frame}
+
+
+\begin{frame}{Price indices: some examples}
+\small{
+\begin{itemize}
+    \item GDP deflator: 
+    \begin{tightitemize}
+        \item GDP deflator $=$ nominal GDP $/$ real GDP
+        \item Average price of goods produced in the economy, weighted by importance in production
+    \end{tightitemize}
+    \item CPI, "Consumer price index":
+    \begin{tightitemize}
+        \item Average price of goods consumed in the economy, weighted by importance in households' consumption baskets
+    \end{tightitemize}
+    \item The main difference between these relates to international trade
+    \begin{tightitemize}
+        \item Many goods in the consumption basket are imported
+    \end{tightitemize}
+\end{itemize}
+}
+\end{frame}
+
+
+\begin{frame}{From 1970 to 2023}
+\begin{itemize}
+    \item[] GDP increased from SEK 196 bn in 1970 to SEK 6,143 bn in 2023: 
+            \[ \frac{Y^N_{2023}}{Y^N_{1970}}=\frac{6,143}{196}\approx 31.4 \]
+            \medskip \pause
+    \item[] In addition to separating prices from quantities, we often also want to account for population growth:
+    \[
+    \frac{Y^N_{2023}}{Y^N_{1970}} = \frac{P_{2023}N_{2023}y_{2023}}{P_{1970}N_{1970}y_{1970}} = \frac{P_{2023}}{P_{1970}} \frac{N_{2023}}{N_{1970}} \frac{y_{2023}}{y_{1970}} 
+    \]
+    where $y$ is real GDP per person and $N$ the population size
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{From 1970 to 2023}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{LN01_Measuring_the_economy/GDP_POP_se.png}
+\end{figure}
+\centering{\small{
+    $\frac{P_{2023}}{P_{1970}} \approx 10.9$, 
+    $\frac{N_{2023}}{N_{1970}} \approx 1.3$ and
+    $\frac{y_{2023}}{y_{1970}} \approx 2.2$
+}}
+\end{frame}
+
+\begin{frame}{From 1970 to 2023}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{LN01_Measuring_the_economy/GDP_POP_se_log.png}
+\end{figure}
+\centering{\small{This is the same graph, but now using a log scale for the y-axis}}
+\end{frame}
+
+
+\begin{frame}{Why logarithms?}
+    \begin{columns}
+        \column{0.5\linewidth}
+        In a graph with a log scale for the vertical axis:
+        \begin{itemize}
+            \item Each vertical step represents the same \emph{relative} change
+        \item A straight line means that the \emph{growth rate} is constant
+        \end{itemize}
+
+        \column{0.5\linewidth}
+        \begin{figure}
+            \centering
+            \includegraphics[width=0.98\linewidth]{LN01_Measuring_the_economy/GDP_POP_se_log.png}
+        \end{figure}
+    \end{columns} \bigskip \pause
+
+    The graph indicates that:
+    \begin{itemize}
+        \item The growth rates of prices and nominal GDP were high from 1970 to 1990
+        \item There is no clear long-run trends in the growth rates of real GDP per capita or the population
+    \end{itemize}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Mathematical preliminaries: logarithms and growth rates}
+
+\begin{frame}{Mathematical preliminaries: the natural logarithm}
+
+Economists use both {\color{red}$\ln x$} and {\color{red}$\log x$} to denote the natural logarithm of $x$. By definition:
+\begin{equation*}
+x=e^a \Leftrightarrow a=\ln x
+\end{equation*}
+\smallskip
+\noindent Properties:
+\begin{equation*}
+\ln (xy) = \ln x + \ln y
+\end{equation*}
+\begin{equation*}
+\ln (x/y) = \ln x - \ln y
+\end{equation*}
+\begin{equation*}
+\ln x^\alpha = \alpha \ln x
+\end{equation*}
+and if $x$ is small:
+\begin{equation*}
+\ln (1+x) \approx x
+\end{equation*}
+\begin{equation*}
+\ln (1+x)^\alpha \approx \alpha x    
+\end{equation*}
+\end{frame}
+
+
+\begin{frame}{Growth rates}
+Economists are often interested in growth rates. Suppose that $y$ grows at rate $g$, that is:
+\begin{equation*}
+    y_{t+1}=(1+g_{t+1})y_t
+\end{equation*}\smallskip
+Note from the properties of the logarithm that we then have:
+\begin{equation*}
+    \ln{y_{t+1}} = \ln{[(1+g_{t+1})y_t]} = \ln{(1+g_{t+1})} + \ln{y_t} \approx g_{t+1} + \ln{y_t}
+\end{equation*}\smallskip
+All this shows different ways that we can express the growth rate:
+\begin{equation*}
+    g_{t+1} = \frac{y_{t+1}-y_t}{y_t} \approx \ln{y_{t+1}}-\ln{y_t} = \ln{\left(\frac{y_{t+1}}{y_t}\right)}
+\end{equation*}
+\end{frame}
+
+
+\begin{frame}{The constant growth rule}
+Suppose that the growth rate $g$ is constant so that, for all $t$,
+\[
+y_{t+1}=(1+g)y_t
+\]
+
+Suppose that we start at $t=0$, with $y_0$, and that there are $3$ periods: \medskip
+\begin{tabular}{r}
+\\
+  $y_1=(1+g)y_0$\\
+  \\
+  $y_2=(1+g)y_1$\\
+  \\
+  $y_3=(1+g)y_2$\\
+\\
+\end{tabular}
+\end{frame}
+
+
+
+\begin{frame}{The constant growth rule}
+Substituting recursively:
+\begin{align*}
+y_3 &=(1+g)y_2\\ \\
+	&=(1+g)\underbrace{(1+g)y_1}_{y_2}\\
+	&=(1+g)(1+g)\underbrace{(1+g)y_0}_{y_1}\\
+	&=(1+g)^3 y_0
+\end{align*}
+
+The constant growth rule:
+\begin{equation*} 
+y_t = (1+g)^t y_0
+\end{equation*}
+\end{frame}
+
+
+\begin{frame}{Annualizing growth rates}
+\begin{itemize}
+    \item Suppose that we observe a variable $y$ in two years, $t$ and $s$
+
+    \item Which constant annual growth $g$ rate takes $y$ from $y_t$ to $y_s$ in $s-t$ years?
+        \[
+            y_s = (1+g)^{s-t} y_t
+        \]
+
+    \item So the annualized growth rate is
+        \[
+            g = \left( \frac{y_s}{y_t} \right) ^\frac{1}{s-t} - 1
+        \]
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Annualizing growth rates: example}
+\begin{itemize}
+    \item GDP per capita in Sweden increased from SEK 145,400 in 1950 to SEK 603,752 in 2024 {\footnotesize(constant prices, reference year 2024)} \medskip
+
+    \item So:
+        \[
+            \frac{y_{2024}}{y_{1950}} \approx 4.15
+        \] \medskip
+
+    \item The average annual growth rate is
+        \[
+            g = \left( \frac{y_{2024}}{y_{1950}} \right) ^\frac{1}{2024-1950} - 1 \approx 0.0194 = 1.94 \text{ percent}
+        \]
+\end{itemize}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Measuring the macroeconomy: exchange rates and international comparisons}
+
+\begin{frame}{How do we compare GDP across countries?}
+\begin{itemize}
+    \item GDP in 2019: 95.1 trillion yuan in China, \$20.6 trillion in the United States \smallskip
+    \item Exchange rate 1 USD = 6.91 yuan \pause
+    \begin{itemize}
+        \item Convert Chinese GDP to dollars at market exchange rates: \smallskip
+        \item[] \hspace{1cm} 95.1 trillion yuan $\times \frac{\$1}{6.91 \texttt{ yuan}} = \$13.8$ trillion 
+    \end{itemize} \smallskip
+    \item But the price level in China was around 68.4 percent of the price level in the United States
+    \begin{itemize}
+        \item Convert Chinese GDP to dollars using U.S. prices (i.e. at \mfemph{purchasing power parity}) \smallskip
+        \item[] \hspace{1cm} 95.1 trillion yuan $\times \frac{\$1}{6.91 \texttt{ yuan} \times 0.684} = \$20.1$ trillion 
+    \end{itemize} \smallskip
+    \item So PPP adjusted GDP in China is roughly as high as that in the United States
+\end{itemize}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Growth facts}
+
+
+\begin{frame}
+\frametitle{}
+\bigskip
+\begin{quote}
+"It is a capital mistake to theorize before one has data. Insensibly one begins to twist facts to suit theories, instead of theories to suit facts."
+\end{quote}
+\bigskip
+\begin{flushright}-Sherlock Holmes (A Scandal in Bohemia, 1891)\end{flushright}
+\end{frame}
+
+\begin{frame}
+\frametitle{Growth facts}
+\begin{itemize}
+\item There is enormous variation in GDP per capita across countries \medskip
+\item Growth rates vary substantially across countries \medskip
+\item Growth rates also vary over time. Sustained growth is a recent phenomenon.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Fact 1: There is enormous variation in GDP per capita across countries}
+\small{
+\begin{table}
+    \centering
+    \begin{tabular}{l r r}
+         Country&GDP per capita &Percent of U.S.\\
+         \hline
+         United States&62,589&100\\
+         Sweden& 52,433 &83.8 \\
+         Germany&51,191 &81.8 \\
+         Japan& 39,704 &63.4 \\
+         Mexico& 18,737&29.9\\
+         China& 14,129 &22.6 \\
+         India&6,711&10.7\\
+         Bangladesh& 4,658 &7.4 \\
+         Chad& 1,615&2.6\\
+         Burundi& 790&1.3\\
+         \hline
+         \multicolumn{3}{l}{\tiny{GDP per capita in 2019, in 2017 U.S. dollars. Source: PWT 10.01.}}
+    \end{tabular}
+\end{table}
+}
+\end{frame}
+
+\begin{frame}{Fact 2: Growth rates vary substantially across countries}
+\small{
+\begin{table}
+\resizebox{0.9\columnwidth}{!}{%
+    \centering
+    \begin{tabular}{l r r c r}
+         &\multicolumn{2}{c}{Percent change in GDP per capita since}&&\multicolumn{1}{c}{Annual growth rate (\%)}\\ \cline{2-3} \cline{5-5}
+         &1960&1990&& 1960-2019\\
+         \hline
+         United States&228&58&&2.0\\
+         Sweden&289&73&&2.3\\
+         Germany&359&82&&2.6\\
+         Japan&625&35&&3.4\\
+         Mexico&181&51&&1.8\\
+         China&1,321&482&&4.6\\
+         India&475&369&&3.0\\
+         Bangladesh&198&204&&0.1\\
+         Chad&12&35&&0.2\\
+         Burundi&5&-22&&0.1\\
+         \hline
+         \multicolumn{5}{l}{\tiny{Last year of data is 2019. Calculations based on GDP per capita in 2017 U.S. dollars. Source: PWT 10.01.}}
+    \end{tabular}
+    }
+\end{table}}
+\end{frame}
+
+
+\begin{frame}{Fact 3: Growth rates vary over time}
+\small{
+\begin{table}
+\resizebox{!}{3.5cm}{%
+    \centering
+    \begin{tabular}{l r r}
+         &\multicolumn{2}{c}{Annual growth rate (\%)} \\ \cline{2-3}
+         &1960-1990&1990-2019\\
+         \hline
+         United States&2.5&1.6\\
+         Sweden&2.7&1.9\\
+         Germany&3.1&2.1\\
+         Japan & {\color{blue}5.8} & {\color{red} 1.0}\\
+         China&3.0&{\color{blue}6.3}\\
+         Mexico&2.1&1.4\\
+         India&{\color{red}0.7}&{\color{blue}5.5}\\
+         Bangladesh&{\color{red}-0.1}&{\color{blue}3.9}\\
+         Chad&-0.6&1.0\\
+         Burundi&1.0&-0.9\\
+         \hline
+         \multicolumn{3}{l}{\tiny{Calculations based on GDP per capita in 2017 U.S. dollars. Source: PWT 10.01.}}
+    \end{tabular}
+    }
+\end{table}}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Fact 3: Growth rates vary over time}
+    Very little growth before 1800s
+    \begin{itemize}
+        \item Lack of good data
+        \item Best estimates:
+        \begin{tightitemize}
+            \item[] ... no growth in first millennium A.D.
+            \item[] ... then less than 0.1 percent per year to year 1800
+        \end{tightitemize}
+    \end{itemize}
+    \bigskip
+
+    Rapid growth thereafter
+    \begin{itemize}
+        \item U.S. GDP per capita has increased by factor 20 since year 1800
+        \item ... but not everywhere
+        \item ... and starting dates vary
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Fact 3: Growth rates vary over time}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{Fig_LongRunGrowth.png}
+\end{figure}
+\tiny{Real GDP per capita, 2017 USD 1000s. Source: \href{https://www.rug.nl/ggdc/historicaldevelopment/maddison/}{Maddison project}}
+\end{frame}
+
+
+\begin{frame}{Rapid growth (both population and productivity) in "the West" from 1800s}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.95\linewidth]{WorldOutputShare.png}
+\end{figure}
+\footnotesize{Different regions' share of world output. Source: \href{https://www.core-econ.org/the-economy/microeconomics/01-prosperity-inequality-11-british-colonization-india.html}{COREecon Microeconomics, figure 1.18}}
+\end{frame}
+
+
+
+\begin{frame}{Growth rates vary over time, but relatively stable just below 2 percent per year in the United States}
+    \begin{figure}
+        \centering
+        \includegraphics[scale=0.38]{Fig_1900sGrowth.png}
+    \end{figure}
+    \tiny{Real GDP per capita, 2017 USD 1000s, and trend lines. Source: \href{https://www.rug.nl/ggdc/historicaldevelopment/maddison/}{Maddison project}}
+\end{frame}
+
+
+\begin{frame}{U.S. population, GDP, and GDP per capita}
+    \begin{figure}
+    \includegraphics[scale=0.4]{MACRO6_FIG03.09.jpg}
+    \end{figure}
+    \flushright \tiny{Figure 3.9 in Jones (2024)}
+\end{frame}
+
+
+\begin{frame}{The great divergence}
+    \begin{itemize}
+    \item Cross-country differences in GDP per capita were relatively modest until 1700s \medskip
+    \item Emergence of large cross-country differences in living standards from 1700 onwards \medskip
+    \item But less so in recent decades 
+    \begin{tightitemize}
+        \item[] In 1990, 58 percent of the world's population lived in low-income countries
+        \item[] ... today, only 9 percent (source: Gapminder)
+    \end{tightitemize}
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{The distribution of world population by GDP per capita}
+    \begin{figure}
+    \includegraphics[scale=0.4]{MACRO6_FIG03.08.jpg}
+    \end{figure}
+    \flushright \tiny{Figure 3.8 in Jones}
+\end{frame}
+
+
+\begin{frame}{The share of the world population living in extreme poverty has fallen substantially}
+    \begin{figure}
+        \includegraphics[scale=0.55]{ExtremePoverty.png}
+    \end{figure}
+    \tiny{Figure 1.3 in \href{https://www.core-econ.org/the-economy/microeconomics/01-prosperity-inequality-04-income-inequality.html}{COREecon Microeconomics (2024)}}
+\end{frame}
+
+
+
+\begin{frame}{GDP is not welfare, but ...}
+    \begin{figure}
+        \includegraphics[scale=0.3]{Fig_gdp_lifeexp.png}
+    \end{figure}
+    \tiny Life expectancy at birth (2023 Human Development Index) and GDP per capita (PWT 10.01). Ireland and Qatar were dropped from the sample. \newline
+    \tiny A more entertaining and dynamic version of this graph: \href{https://www.youtube.com/watch?v=jbkSRLYSojo}{Hans Rosling: 200 years in four minutes}
+\end{frame}
+
+
+\begin{frame}{Growth since 1960}
+\begin{itemize}
+    \item Some major economies have maintained or improved their position relative to the US (e.g. France, Italy, Spain and Japan)\medskip
+
+    \item In the poorer group, some have improved (Korea, India, China) while others have fallen further behind (Nigeria, Ethiopia)\medskip
+
+    \item Great heterogeneity: growth miracles and growth disasters abundant
+\end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame}{Questions}
+\begin{itemize}
+    \item Why are some countries so rich and others so poor?\medskip
+
+    \item Why do some countries grow rapidly and some stagnate?\medskip
+
+    \item Can growth continue in the long run? What are the sources and limitations of growth?
+    \begin{tightitemize}
+        \item Population growth? 
+        \item Physical capital?
+        \item Education, research, ideas?
+    \end{tightitemize}
+\end{itemize}
+\bigskip
+\centering{Malthus $\longrightarrow$ Solow $\longrightarrow$ Romer}
+\end{frame}
+
+
+\begin{frame}{What we did}
+\begin{itemize}
+    \item Measuring the economy: national accounts; real and nominal GDP; price indices
+    \item Mathematical preliminaries: logarithms and growth rates
+    \item Growth facts
+\bigskip 
+\item[] \textbf{Next time:} the production function; growth accounting, the Solow model
+\end{itemize}
+\end{frame}
+
+\end{document}

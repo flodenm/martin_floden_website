@@ -18,9 +18,13 @@ This directory contains machine-readable course material for the EC2211 course a
 
 ## Included Fall 2025 material
 
+- Lecture 0: literature and preliminary lecture outline.
+- Lecture 0: pedagogical course introduction, with figure notes and a separate
+  administrative-scope notice. Historical logistics and assessment rules are
+  deliberately omitted.
+- Lecture 1: Measuring the Macroeconomy, with figure notes.
 - Lecture 2: Economic Growth and the Solow Model, with figure notes.
 - Lecture 3: More on Growth Theory, with figure notes and an errata file.
 - Problem Set 1, clearly marked as an archived assignment with no solutions.
 
 The material has been tested for factual retrieval, mathematical tutoring, source boundaries, and figure interpretation in GitHub Copilot Spaces.
-
