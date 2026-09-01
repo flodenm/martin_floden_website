@@ -16,8 +16,11 @@ This directory contains machine-readable course material for the EC2211 course a
 - Textbook figures, photographs, exam material, and solution material are excluded unless the course coordinator explicitly approves them.
 - Administrative information in older lecture notes (for example Athena instructions and old deadlines) is historical, not current guidance.
 
-## Pilot
+## Included Fall 2025 material
 
-The initial pilot contains Lecture 2 from Fall 2025 and a companion description of its figures. It is intended to test retrieval quality in GitHub Copilot Spaces before the rest of the material is processed.
+- Lecture 2: Economic Growth and the Solow Model, with figure notes.
+- Lecture 3: More on Growth Theory, with figure notes and an errata file.
+- Problem Set 1, clearly marked as an archived assignment with no solutions.
 
+The material has been tested for factual retrieval, mathematical tutoring, source boundaries, and figure interpretation in GitHub Copilot Spaces.
 
