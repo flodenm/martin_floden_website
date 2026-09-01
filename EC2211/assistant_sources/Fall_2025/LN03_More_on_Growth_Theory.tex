@@ -1,0 +1,748 @@
+% COURSE-ASSISTANT SOURCE — FALL 2025 ARCHIVE
+% Preserve as historical course material. Fall 2026 material takes priority.
+% See LN03_errata.md before using the steady-state output-per-worker formula.
+% Refer to LN03_figure_notes.md for figures; image files are not included.
+\documentclass[10pt]{beamer}
+\input{EC2211_preamble.txt}
+\title{Lecture Notes 3\newline More on Growth Theory}
+
+\begin{document}
+\maketitle
+
+\begin{frame}{Contents and literature}
+    \begin{itemize}
+        \item The Solow model with population growth
+        \item Convergence
+        \item Human capital
+        \item Technological progress 
+        \item Finite natural resources
+        \item Malthus and the dismal science
+    \end{itemize}\bigskip
+
+    Literature: 
+    \small{
+    \begin{tightitemize}
+        \item Jones (2024), chapter 5 and 7.7-7.8
+        \item *Steinsson (2025a), \href{https://eml.berkeley.edu/~jsteinsson/teaching/malthus.pdf}{"Malthus and pre-industrial stagnation"}
+    \end{tightitemize}
+}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The Solow model with population growth}
+
+
+\begin{frame}{The Solow model with population growth}
+\begin{itemize}
+    \item Recall the Solow model from the previous lecture\medskip
+    \item Let us now allow for population growth in this model
+    \begin{tightitemize}
+        \item[] Let $L_t$ denote the size of the population at date $t$
+    \end{tightitemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{The production function}
+    The production function is
+    \begin{equation}\label{eq19}
+        Y_t=A K_t^{\alpha} L_t^{1-\alpha}
+    \end{equation}\medskip
+
+    As before, we let lower-case letters denote variables in per capita terms, i.e. $k_t \equiv K_t/L_t$ and 
+    \begin{equation}\label{eq20}
+        y_t \equiv \frac{Y_t}{L_t}=\frac{A K_t^{\alpha} L_t^{1-\alpha}}{L_t} = A k_t^{\alpha}
+    \end{equation}
+
+\end{frame}
+
+
+\begin{frame}{Population growth}
+Let $n$ be the (constant) population growth rate, so that
+\begin{equation*}
+    \frac{L_{t+1}}{L_t}=1+n
+\end{equation*}
+\end{frame}
+
+
+\begin{frame}{Steady state with population growth}
+    Recall that the capital stock develops according to
+    \begin{equation}\label{dK}
+        K_{t+1}=(1-\delta)K_t+sY_t
+    \end{equation}
+
+    Divide by $L_t$:
+    \begin{equation*}
+        \frac{K_{t+1}}{L_t} = (1-\delta) \frac{K_t}{L_t} + s \frac{Y_t}{L_t} = (1-\delta) k_t + s y_t
+    \end{equation*}
+
+    Multiply the left-hand side by $L_{t+1}/L_{t+1}$:
+    \begin{equation*}
+        \frac{K_{t+1}}{L_t} = \frac{L_{t+1}}{L_{t+1}} \frac{K_{t+1}}{L_t} = \frac{L_{t+1}}{L_t} \frac{K_{t+1}}{L_{t+1}} = (1+n) k_{t+1}
+    \end{equation*}\smallskip
+
+    Since $nk_{t+1} \approx nk_t $ we obtain:
+    \begin{equation}\label{eqdk}
+        (1+n) k_{t+1} = (1-\delta) k_t + s y_t \implies \Delta k_{t+1} \approx s A k_t^\alpha - (\delta + n) k_t
+    \end{equation}
+\end{frame}
+
+
+\begin{frame}{Steady state with population growth}
+    Steady state when $k_{t+1}=k_t$. Equation \eqref{eqdk} implies that $k^{*}$ satisfies:
+    \begin{equation*}
+        sA(k^{*})^\alpha =(\delta + n) k^{*}
+    \end{equation*}
+
+    Solving for $k^{*}$:
+    \begin{equation}\label{eqkss}
+        k^{*} = \bigg( \frac{sA}{\delta + n} \bigg)^{\frac{1}{1-\alpha}}
+    \end{equation}
+
+    Using $y=Ak^\alpha$, we obtain $y^{*}$: 
+    \begin{equation}\label{eqyss}
+        y^{*} = \bigg( \frac{sA}{\delta + n} \bigg)^{\frac{\alpha}{1-\alpha}}
+    \end{equation}
+\end{frame}
+
+
+\begin{frame}{The Solow diagram with population growth}
+\begin{figure}
+    \includegraphics[scale=0.5]{SolowDiagram.png}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{Steady state with population growth}
+    Note how the steady state is affected by population growth: \medskip
+
+    \begin{itemize}        
+        \item  Consider a fixed amount of investment, $sY$ \medskip
+
+        \item With higher population growth, each child will have less capital \smallskip
+        \begin{itemize}
+            \item So higher $n$ means that we move to a steady state with less capital per person \smallskip
+            \item Alternatively, we need a higher savings rate to maintain the same capital stock per person over time
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Growth rates on the balanced growth path}
+    \begin{block}{Balanced growth path (BGP)}
+        On a balance growth path, all variables grow at constant rates (or are constant)
+    \end{block} 
+    \bigskip
+
+    \begin{tabular}{llr}  
+        Variable				&Notation		&Growth rate on BGP\\ 
+        \hline
+        Capital per worker	& $k = K/L$ 	& $0$     \\
+        Output per worker   & $y = Y/L$     & $0$   \\
+        Capital stock       & $K = k \cdot L$ & $n$   \\
+        Output 		        & $Y = y \cdot L$ & $n$ \\
+        \hline
+    \end{tabular} \bigskip \newline
+    
+    \footnotesize{Note: I will often use "steady state" as a synonym for "balanced growth path"}
+\end{frame}
+
+
+\begin{frame}{The basic Solow model: summing up}
+    \begin{itemize}
+        \item An important insight from the Solow model:
+        \begin{tightitemize}
+            \item \mfemph{Increased capital accumulation does not lead to higher growth in the long run}
+            \item An increase in the savings rate (more investments) generates growth during the transition to a new equilibrium
+            \item In the new equilibrium, output is higher but the growth rate is the same
+        \end{tightitemize} \medskip
+        \item The diminishing marginal product of capital is key:
+        \begin{tightitemize}
+            \item If we invest and build more capital, output will increase but so will depreciation of capital
+            \item Depreciation is linear in capital but output increases less and less as we get more capital
+        \end{tightitemize}
+        \item This conclusion points to the importance of TFP: technological progress is necessary for long-run growth
+    \end{itemize}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Convergence (again)}
+
+
+\begin{frame}{Convergence and conditional convergence}
+    Consider two economies, A and B. They are similar, except that population growth is higher in B than in A\bigskip
+
+    How will the two countries differ in:
+    \begin{itemize}
+        \item steady-state growth in output per capita?
+        \item steady-state level of output per capita?
+        \item transitional growth rates in output per capita if they initially have equally large capital stocks per capita? 
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Convergence and conditional convergence}
+    Rewrite equation (\ref{eqdk}) to see that the growth rate of $k$ is
+    \begin{equation*}
+        \frac{\Delta k_{t+1}}{k_t} = s \frac{y_t}{k_t} - (\delta + n)
+    \end{equation*}
+
+    The growth rate of output per capita is (show this!)
+    \begin{equation*}
+        \frac{\Delta y_{t+1}}{y_t} = \alpha \frac{\Delta k_{t+1}}{k_t}
+    \end{equation*}
+
+    So if countries A and B have the same $k_t$ and are identical in all other ways except that $n$ is larger in B than in A, we now see that the growth rate will be lower in B than in A \smallskip
+
+    More generally, the Solow model says that convergence is \emph{conditional}: we must account for differences not only in initial capital, but also in population growth, investment rates, etc
+\end{frame}
+
+
+\begin{frame}{Growth rates in the OECD, 1960-2019}
+\begin{figure}
+  \includegraphics[scale=0.35]{MACRO6_FIG05.08.jpg}
+\end{figure}
+\flushright \tiny Figure 5.8 in Jones (2024)
+\end{frame}
+
+
+\begin{frame}{Growth rates around the world, 1960-2019}
+\begin{figure}
+  \includegraphics[scale=0.35]{MACRO6_FIG05.09.jpg}
+\end{figure}
+\flushright \tiny Figure 5.9 in Jones (2024)
+\end{frame}
+
+
+\begin{frame}{Middle income traps?}
+    \href{https://www.cgdev.org/sites/default/files/new-era-unconditional-convergence.pdf}{Patel, Sandefur and Subramanian (2021)}:
+    \begin{itemize}
+        \item "Poorer countries have in fact been catching up with richer ones, albeit slowly, since the mid 1990s"
+        \item "Debates about a 'middle-income trap' also appear anachronistic"
+    \end{itemize} \bigskip
+
+    \href{https://bit.ly/WDR2024_FullReport_ENG}{World Bank (2024)}:
+    \begin{itemize}
+        \item "The progress of the middle-income countries has slowed in recent decades"
+        \item "A key characteristic of economic growth in middle-income countries is its lack of persistence" 
+    \end{itemize}   
+\end{frame}
+
+
+\begin{frame}{Growth rates around the world, 1960-2019}
+    \begin{figure}
+        \includegraphics[scale=0.45]{Patel_et_al_2021.png}
+    \end{figure}
+    \flushright \tiny From Patel, Sandefur and Subramanian (2021) 
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Human capital}
+
+
+\begin{frame}{Mankiw, Romer \& Weil}
+\begin{itemize}
+    \item Recall that $\alpha$ is the capital share in production, $y=A k^\alpha$ \smallskip
+    \item With $\alpha=1/3$, the production function predicts "too high" output in countries with little capital \smallskip
+    \item The fit between $k$ and $y$ appears better when $\alpha=2/3$ \smallskip
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Output in the data}
+    \begin{figure}
+        \includegraphics[width=0.92\linewidth]{MRW1.png}
+    \end{figure}
+    \footnotesize{Output and capital per capita 2019, 2017 USD price level. Capital stocks calculated as in Jones (2024). Source: PWT 10.01.}
+\end{frame}
+
+
+\begin{frame}{Output in the data and implied by $y=Ak^{1/3}$}
+    \begin{figure}
+        \includegraphics[width=0.92\linewidth]{MRW2.png}
+    \end{figure}
+    \footnotesize{Output and capital per capita 2019, 2017 USD price level. Capital stocks calculated as in Jones (2024). Source: PWT 10.01.}
+\end{frame}
+
+
+\begin{frame}{Output in the data and implied by $y=Ak^{1/3}$ and $y=Ak^{2/3}$}
+    \begin{figure}
+        \includegraphics[width=0.92\linewidth]{MRW3.png}
+    \end{figure}
+    \footnotesize{Output and capital per capita 2019, 2017 USD price level. Capital stocks calculated as in Jones (2024). Source: PWT 10.01.}
+\end{frame}
+
+
+\begin{frame}{Mankiw, Romer \& Weil}
+\begin{itemize}
+    \item The fit between $k$ and $y$ appears better when $\alpha=2/3$ \smallskip
+    \item But if $\alpha=2/3$, the capital share in production becomes unrealistically high and the wage share much too low \smallskip
+    \item Is there something missing? Something that is similar to capital but that is compensated as labor?
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{The importance of human capital}
+    \href{https://scholar.harvard.edu/sites/scholar.harvard.edu/files/mankiw/files/contribution_to_the_empirics.pdf}{Mankiw, Romer and Weil (1992)} modify the Solow model by adding human capital to equation \eqref{eq19}:
+    \begin{equation}\label{eq24}
+        Y_t=A K_t^{\alpha} H_t^{\beta} L_t^{1-\alpha-\beta}
+    \end{equation}
+    where $H_t$ is the stock of human capital and $\alpha+\beta <1$\bigskip
+
+    As in the basic Solow model, they assume that a constant fraction ($s_k$) of output is invested in physical capital. They also assume that a constant fraction ($s_h$) of output is invested in human capital. \bigskip 
+
+    In this model, investment in physical capital increases output, which increases investment in human capital. The effect of investment on income per capita is therefore greater when human capital is taken into account.
+\end{frame}
+
+
+\begin{frame}{Mankiw, Romer and Weil (1992): conclusions}
+    \begin{itemize}
+        \item Mankiw, Romer and Weil take the model with human capital to the data and report highly significant elasticities of income per capita with respect to investment that are consistent with each of $\alpha$ and $\beta$ around $1/3$\medskip
+
+        \item Moreover, the model with human capital can explain almost 80 percent of the cross-country variation in income per capita in their samples
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Rising return to education}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.92\linewidth]{MACRO6_FIG07.08.jpg}
+    \end{figure}
+    \flushright \tiny{Figure 7.8 in Jones (2024)}
+\end{frame}
+
+
+\begin{frame}{Growth and inequality}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.85\linewidth]{MACRO6_FIG07.12.jpg}
+    \end{figure}
+    \flushright \tiny{Figure 7.12 in Jones (2024)}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Technological progress in the Solow model}
+
+
+\begin{frame}{Technological progress in the Solow model}
+    \begin{itemize}
+        \item We saw in the previous lecture that growth in TFP has been an important factor behind increased output in many countries \medskip
+        \item The Solow model is often specified with TFP, $A$, not as a constant but with the assumption that it grows at an exogenous rate \medskip
+        \item The Solow model can then "allow" for long-run growth
+        \begin{tightitemize}
+            \item ... but it does not attempt to explain or model why TFP grows
+            \item Next time we will look at a model that makes technological progress endogenous
+        \end{tightitemize}
+    \end{itemize}
+ \end{frame}
+
+
+\begin{frame}{The balanced growth path with TFP growth in the Solow model}
+\begin{itemize}
+    \item Suppose that the production function is
+        \[ Y_t = A_t K_t^\alpha L_t^{1-\alpha} \]
+    \item[] where TFP grows at the constant rate $g$,
+        \[ A_{t+1} = (1+g) A_t \]
+    \item Can there then be a balanced growth path in this economy?
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{The balanced growth path with TFP growth in the Solow model}
+\begin{itemize}
+    \item Recall that along a BGP, all variables grow at constant rates \medskip
+    \item Recall from \eqref{dK} that the capital stock develops according to $K_{t+1}=(1-\delta)K_t+sY_t$, i.e.
+        \[ \frac{K_{t+1}-K_t}{K_t} = s \frac{Y_t}{K_t} - \delta \] \smallskip
+    \item The left-hand side is the growth rate of capital. The right-hand side can only be constant if $Y_t/K_t$ is constant! \medskip
+    \item And for $Y_t/K_t$ to be constant, $Y$ and $K$ must grow at the same rate; call this rate $\gamma$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{The balanced growth path with TFP growth in the Solow model}
+\begin{itemize}
+    \item The growth rate of $Y$ is
+        \begin{equation}\label{gY}
+            g_Y = g_A + \alpha g_K + (1-\alpha)g_L
+        \end{equation}
+    \item[] where $g_X$ denotes the growth rate of variable $X$ \medskip
+    \item We have assumed that the growth rate of TFP is $g_A = g$ and that the growth rate of the population is $g_L=n$ \medskip
+    \item We also noted that along a BGP we must have $ g_Y=g_K=\gamma $ \medskip
+    \item So we can rewrite (\ref{gY}) as $\gamma = g + \alpha \gamma + (1-\alpha) n$, i.e.        
+        \[ \gamma = n + \frac{1}{1-\alpha}g \]
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{The balanced growth path with TFP growth in the Solow model}
+\begin{itemize}
+    \item What are then the per capita growth rates? \medskip
+    \item Output per capita, capital per capita and consumption per capita grow at rate $\gamma-n=g/(1-\alpha)$ \medskip
+    \item Using similar steps as in our basic Solow model, we could have demonstrated that the economy will move towards the balanced growth path if it starts with any positive level of capital
+\end{itemize}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Taking stock of the Solow model}
+
+
+\begin{frame}{Taking stock of the Solow model}
+\begin{itemize}
+    \item Demonstrates how the level of GDP per capita in the long run increases with:
+    \begin{tightitemize}
+        \item high TFP
+        \item high savings rate (= high investment rate)
+        \item low depreciation rate 
+        \item low population growth rate
+    \end{tightitemize}
+
+    \item Demonstrates that diminishing returns imply that capital accumulation cannot generate sustained growth
+    
+    \item Helps us understand growth rates out of steady state
+    \begin{tightitemize}
+        \item "Transitional dynamics"
+    \end{tightitemize}
+
+    \item Shortcomings:
+    \begin{tightitemize}
+        \item Suggests that TFP differences are key to explaining cross-country differences in income, but TFP differences are exogenous and not explained
+
+        \item Does not explain why investment rates vary across countries
+    \end{tightitemize}
+\end{itemize}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Finite natural resources}
+
+
+\begin{frame}{Finite natural resources}
+\begin{itemize}
+    \item We have assumed that capital depreciates at an exogenous rate, but that it can be rebuilt, and expanded, through investment\smallskip
+    \item What if some production factors are not renewable ("oil") and some others are in fixed supply ("arable land")?\smallskip
+    \item What if the economy affects the climate, and the climate affects the economy? \pause \emph{Not addressed in this course, but very active research field last decade. The Solow model is an important building block for such analysis.}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Non-renewable natural resources}
+    The production function is
+    \begin{equation} \label{gYR}
+        Y_t= A_t K_t^\alpha (u_tR_t)^\beta L_t^{1-\alpha-\beta}
+    \end{equation}
+    where $R$ is a nonrenewable natural resource and $u_t$ is the fraction of that resource that is used for production in period $t$. We also assume that $\alpha+\beta<1$. \medskip
+
+    The stock of the natural resource develops according to $R_{t+1}=R_t-u_tR_t$. To simplify, assume that $u$ is constant. The stock of the resource then follows:
+    \begin{equation*}
+        R_{t+1}=(1-u)R_t
+    \end{equation*}\medskip
+
+    As before:
+    \begin{equation} \label{Kprime5}
+        K_{t+1}=(1-\delta)K_t + sY_t
+    \end{equation}
+\end{frame}
+
+
+\begin{frame}{Non-renewable natural resources}
+\begin{itemize}
+    \item Can we find an equilibrium in this economy?\smallskip
+    \item Can there be positive growth in the long run if a production factor is nonrenewable?
+    \pause
+    \bigskip
+    \item Equilibrium here would be a balanced growth path where all variables grow at constant rates (rates that may be positive, zero or negative)
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Equilibrium with non-renewable natural resources}
+    Note that, as before, the growth rate of capital is (see \eqref{Kprime5})
+    \begin{equation*}
+        \frac{K_{t+1}-K_t}{K_t}=s\frac{Y_t}{K_t}-\delta
+    \end{equation*}
+    and that this growth rate can only be constant if $Y_t$ and $K_t$ grow at the same rate\medskip
+
+    We know that $A$ grows at rate $g$, $R$ at rate $-u$ and $L$ at rate $n$. Is it then possible for $Y$ and $K$ to grow at a common rate (call this rate $\gamma$)?
+\end{frame}
+
+
+\begin{frame}{Equilibrium with non-renewable natural resources}
+    From the production function (\ref{gYR}) we see that
+    \[ g_Y = g_A + \alpha g_K + \beta g_R + (1-\alpha-\beta) g_L\]
+
+    Now use $g_Y=g_K=\gamma$, $g_A=g$, $g_R=-u$ and $g_L=n$ to get
+    \begin{equation*}
+        \gamma = g + \alpha \gamma - \beta u + (1-\alpha-\beta)n
+    \end{equation*}
+
+    which simplifies to
+    \begin{equation*}
+        \gamma = n + \frac{1}{1-\alpha}g - \frac{\beta}{1-\alpha}(n+u) 
+    \end{equation*}
+\end{frame}
+
+
+\begin{frame}{Interpreting the equilibrium with non-renewable natural resources}
+    We are interested in the growth rate of output per capita, $\gamma-n$:
+    \begin{equation*}
+        \gamma - n = \frac{1}{1-\alpha}g -\frac{\beta}{1-\alpha}(n+u) 
+    \end{equation*}\pause
+
+    If $\beta=0$, we are back to the original Solow model\smallskip
+    
+    If $\beta>0$, the nonrenewable resource is a drag on growth:
+    \begin{itemize}
+        \item Rapid population growth $\rightarrow$ more people to share the vanishing resource
+        \item High utilization $\rightarrow$ rapid depletion
+    \end{itemize}\smallskip
+    \pause
+
+    Growth can be positive or negative in equilibrium depending on parameters
+\end{frame}
+
+
+\begin{frame}{Land}
+    The production function is now:
+    \begin{equation*}
+        Y_t= A_t K_t^\alpha D^\lambda L_t^{1-\alpha-\lambda}
+    \end{equation*}
+    where $D$ denotes land. As before, we assume that $\alpha+\lambda<1$ \medskip
+
+    The setup is very similar to the previous analysis, but $D$ is now a production factor that is constant\medskip
+
+    Solving for equilibrium we find that the growth rate of output per capita is
+    \begin{equation*}
+        \frac{\Delta y_{t+1}}{y_t}= \frac{1}{1-\alpha}g - \frac{\lambda}{1-\alpha}n
+    \end{equation*}\medskip
+    \pause
+
+    Estimates indicate that the drag from $R$ and $D$ in production on the annual U.S. growth rate is around 0.3 percentage points \tiny{(see \href{www.brookings.edu/wp-content/uploads/1992/06/1992b_bpea_nordhaus_stavins_weitzman.pdf}{Nordhaus (1992)} and \href{https://wwnorton.com/books/9781324059578}{Jones and Vollrath (2024)})}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Malthus and the dismal science}
+
+
+\begin{frame}{Malthus and the dismal science}
+\begin{columns}
+    \column{0.6\textwidth}  
+    \begin{itemize}
+        \item Malthus (1798), "An Essay on the Principle of Population"\medskip
+
+        \item Income growth $\rightarrow$ population growth $\rightarrow$ land shortage (decreasing marginal product of labor) $\rightarrow$ falling income \medskip
+
+        \item Income will be stuck at low level
+    \end{itemize}
+
+    \column{0.4\textwidth}
+    \begin{figure}
+        \centering
+        \includegraphics[width=1\linewidth]{malthus.jpg}
+    \end{figure}
+    \centering \small{Thomas Malthus 1766-1834}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{Malthus and the dismal science}
+    The Malthusian production function:
+    \begin{equation} \label{Mprod}
+        Y_t = A D^\lambda L_t^{1-\lambda}
+    \end{equation}
+    where $D$ is again land which is in fixed supply\medskip
+
+    Population growth is now \emph{endogenous},
+    \begin{equation} \label{Mpop}
+        \frac{L_{t+1}}{L_t} = \frac{y_t}{y^s}
+    \end{equation}
+
+    Population thus grows when income per capita is high. But the population \emph{shrinks} if income per capita is below the "subsistence level" $y^s$
+\end{frame}
+
+
+\begin{frame}{Solving the Malthusian model}
+    Rewrite equation \eqref{Mprod} in per capita terms:
+    \begin{equation} \label{M_y}
+        y_t = A \left( \frac{D}{L_t} \right)^\lambda
+    \end{equation}
+    and use this in \eqref{Mpop}:
+    \begin{equation} \label{M_L}
+        L_{t+1} = \frac{A D^\lambda}{y^s} L_t^{1-\lambda}
+    \end{equation}\medskip
+
+    Let
+    \begin{equation*}
+        \phi = \frac{A D^\lambda}{y^s}
+    \end{equation*}
+    so that we get
+    \[
+        L_{t+1} = \phi L_t^{1-\lambda}
+    \]
+    {\footnotesize See figures 3 and 4 in Steinsson (note that his $N$ is the same as our $L$ and his $a$ is our $\lambda$)}
+\end{frame}
+
+
+\begin{frame}{Interpreting the Malthusian model}
+
+    Consider the effects of an increase in productivity, $A$:
+    \begin{itemize}
+        \item Production and wages increase
+        \item The $L_{t+1}=\phi L_t^{1-\lambda}$ curve shifts up
+        \item The population grows until it reaches a new equilibrium
+        \item In the new equilibrium, production per capita and wages are back at the original level
+    \end{itemize} \medskip
+
+    Fixed supply of land in combination with diminishing marginal product of labor is key here:
+    \begin{itemize}
+        \item Higher production leads to a larger population
+        \item In contrast to the Solow model where we can build capital, here land is fixed
+        \item Output increases, but less and less as land gets crowded -- so output per capita falls
+        \item Lower incomes per capita means that the population shrinks
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{The Malthusian model with technological progress}
+    Suppose that productivity grows over time at the constant rate $g$, $A_{t+1}=(1+g)A_t$ \medskip
+
+    Will per capita income now grow in the long run? \medskip \pause
+
+    Consider the two key equations \eqref{M_y} and \eqref{M_L} in the Malthusian model, with $A_t$ instead of $A$:
+    \begin{itemize}
+        \item Income per capita is
+            \begin{equation} \label{M_y2}
+                y_t = A_t \left( \frac{D}{L_t} \right)^\lambda
+            \end{equation} \small
+        \item and the size of the population develops according to
+            \begin{equation} \label{M_L2}
+                 L_{t+1} = \frac{A_t D^\lambda}{y^s} L_t^{1-\lambda}
+            \end{equation}
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{The Malthusian model with technological progress}
+    From \eqref{M_y2} and \eqref{M_L2}, we see that the growth rates for $y$ and $L$ (along a balanced growth path where growth rates are constant) are:
+    \begin{equation} \label{M_y3}
+        g_y = g_A - \lambda g_L
+    \end{equation}
+    and
+    \begin{equation} \label{M_L3}
+        g_L = g_A + (1-\lambda) g_L
+    \end{equation}\medskip 
+
+    Combining these two equations, and using $g_A=g$, we get:
+    \begin{itemize}
+        \item[] $g_L = g / \lambda$
+        \item[] $g_y = 0$
+    \end{itemize} \medskip
+
+    According to the Malthusian model, productivity growth (in the long run) only generates higher population growth, not higher income!
+\end{frame}
+
+
+
+\begin{frame}{The Malthusian model: evidence}
+    \begin{figure}
+        \includegraphics[width=0.75\linewidth]{CORE_Malthus_figure-01-12-c.png}
+    \end{figure}
+    \small{
+    \begin{itemize}
+        \item Population fell in the 1300s due to the plague; wages then rose
+        \item As wages rose, the population increased but then wages fell
+        \item In 1610, population and wages were close to the levels in 1280
+    \end{itemize} 
+    } \smallskip
+
+    \flushright \tiny Material from \href{https://www.core-econ.org/the-economy/microeconomics/01-prosperity-inequality-07-malthusian-trap.html\#nav}{COREecon: The Economy 2.0}
+\end{frame}
+
+
+\begin{frame}{The Malthusian model: evidence}
+    \begin{figure}
+        \includegraphics[width=0.75\linewidth]{CORE_Malthus_figure-01-12-f.png}
+    \end{figure}
+    \small{
+    \begin{itemize}
+        \item Technological progress in the 1600s (crop rotation, potatoes, Chinese plough)
+        \item Wages initially increased
+        \item But eventually wages fell back as the population rose
+    \end{itemize} 
+    } \smallskip
+
+    \flushright \tiny Material from \href{https://www.core-econ.org/the-economy/microeconomics/01-prosperity-inequality-07-malthusian-trap.html\#nav}{COREecon: The Economy 2.0}
+\end{frame}
+
+
+\begin{frame}{Malthus' unfortunate timing}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\linewidth]{Figs/MalthusWages.png}
+    \end{figure}
+    \flushright \tiny Figure 1 in Steinsson
+\end{frame}
+
+\begin{frame}{From Malthus to Solow}
+    Why did the world economies eventually escape the Malthusian trap? \bigskip \pause
+
+    \begin{itemize}
+        \item Very rapid increase in productivity growth, population increased but "not enough" to reduce income
+        \item Land became a less important production factor, physical capital, machines, etc became more important
+        \item Demographic transition (at high income levels, additional income leads to \emph{lower}, not higher, birth rates, ...)
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{What we did}
+\begin{itemize}
+    \item The Solow model
+    \begin{tightitemize}
+        \item Population growth
+        \item Convergence (are poor countries catching up with the frontier?)
+        \item Human capital (do differences in schooling explain differences in income levels?)
+        \item Technological progress (the only source of long-run growth in per capita income in the Solow model)
+    \end{tightitemize}
+    \item Finite natural resources    
+    \begin{tightitemize}
+        \item There can be long-run growth even if a production function is not renewable, provided that technological progress is sufficiently rapid
+    \end{tightitemize}
+    \item The Malthusian model
+    \begin{tightitemize}
+        \item No long-run growth even if there is technological progress!
+    \end{tightitemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Next time}
+    TFP and long-term economic growth
+    \begin{itemize}
+        \item The AK model
+        \item The Romer model
+        \item Institutions and growth
+        \item Accounting for growth in the United States and in the European Union
+    \end{itemize}
+\end{frame}
+
+\end{document}
+
+

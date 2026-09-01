@@ -60,7 +60,7 @@ The diagram adds output and consumption to the standard investment–depreciatio
 
 ### Exercise: Where is the steady state? (Poverty trap?)
 
-The non-standard S-shaped production function can intersect the depreciation line more than once. The arrows indicate that some intersections are stable and others unstable. A low-capital stable equilibrium can act as a poverty trap: economies starting below the unstable threshold converge to the low steady state, while those starting above it can converge to a higher one. The slide explicitly warns that this production function is not Cobb–Douglas.
+The output and investment curves initially flatten, then steepen sharply over an intermediate range, and finally flatten again. They are therefore not globally concave. This non-concavity permits three positive intersections with the linear depreciation schedule: stable low- and high-capital steady states separated by an unstable threshold. Under unchanged parameters and without a shock large enough to cross that threshold, an economy below it converges to the low steady state. A sufficiently large capital injection or a parameter change can allow escape. The slide explicitly warns that this production function is not Cobb–Douglas.
 
 ### An increase in the investment rate
 
@@ -85,5 +85,4 @@ The time-series comparison shows a sharp divergence: South Korea's investment ra
 ## Omitted non-instructional image
 
 The photograph of Robert Solow is not included. Its only course-relevant information is the identification “Robert Solow, 1924–2023.”
-
 
