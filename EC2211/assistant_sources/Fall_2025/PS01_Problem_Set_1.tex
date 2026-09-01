@@ -1,0 +1,82 @@
+% COURSE-ASSISTANT SOURCE — FALL 2025 ARCHIVE
+% This is an archived problem set, not a current assessed assignment.
+% Its deadline, credit value, Athena instructions, and exercise list are historical.
+% The file contains questions and hints but no solutions.
+\documentclass[12pt,a4paper]{article}
+
+\input{EC2211_PSpreamble.txt}
+\title{Problem Set 1}        % Sets the document title.
+
+
+\begin{document}
+\pagenumbering{gobble} % Stops counting the pages from this point until changed again.
+\maketitle
+
+\textbf{Due Tuesday, October 7 at 8 am.} Worth a maximum of 2.5 credits for the final grade. Send one solution per group to your seminar teacher through Athena.
+
+\section{How large is the economy of India? (0.5 p)}
+(Exercise 7 in Jones chapter 2)
+Indian GDP in 2019 was 195 trillion rupees, while U.S. GDP was \$20.6 trillion. The exchange rate in 2019 was 70.4 rupees per dollar. India turns out to have lower prices than the United States: the price level in India (converted to dollars) divided by the price level in the Unites States was 0.303 in 2019.
+\begin{itemize}
+    \item[a.] What is the ratio of Indian GDP to U.S. GDP if we don't take into account the differences in relative prices and simply use the exchange rate to make the conversion?
+    \item[b.] What is the ratio of real GDP in India to real GDP in the United States in common prices (i.e., under purchasing power parity)?
+    \item[c.] Why are these two numbers different?
+\end{itemize}
+
+\section{Growth accounting (1 p)}
+
+The table below shows data and estimates for GDP, capital stocks and the size of population in Germany, Italy, Sweden and the United States in 1999 and 2024.
+
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{lrrrcrrrr}
+        \multicolumn{9}{l}{\textbf{Table: From 1999 to 2024}} \\
+        \hline
+         & \multicolumn{3}{c}{1999} & & \multicolumn{3}{c}{2024} \\
+         \cline{2-4} \cline{6-8} 
+         & GDP & Capital & Population & & GDP & Capital & Population \\
+        \hline
+        Germany & 2,740 & 10,897 & 81,422 & & 3,609 & 13,778 & 84,716 \\
+        Italy & 1,704 & 6,144 & 56,916 & & 1,934 & 7,398 & 58,938 \\
+        Sweden & 3,803 & 16,590 & 8,857 & & 6,260 & 24,861 & 10,659 \\
+        United States & 13,543 & 36,315 & 279,328 & & 23,305 & 70,683 & 340,212 \\
+        \hline
+        \multicolumn{9}{l}{
+             \footnotesize{GDP: chain-linked volume, billions of 2023 local currency. Capital stock: estimated productive capital stock,}
+        } \\
+        \multicolumn{9}{l}{
+            \footnotesize{volume, billions of 2023 local currency. Population: thousands. Source: \href{https://www.oecd.org/en/topics/economic-outlook.html}{OECD Economic Outlook}}
+        } \\
+    \end{tabular}
+\end{table}
+
+\begin{itemize}
+    \item[a.] For each country, calculate the percentage change in GDP per capita and capital stock per capita from 1999 to 2024. Report also the annualized growth rates of GDP per capita.
+
+    \item[b.] Suppose that the production function in each country is $Y_t=A_t K_t^\alpha L_t^{1-\alpha}$ and assume that the capital share in production is $\alpha = 0.33$. Calculate how much TFP increased in each country from 1999 to 2024. 
+    
+    \item[] \emph{Hint:} You can do this either by solving for $A_{2024}/A_{1999}$ from the production function or by using the approximation that $g_y \approx g_A + \alpha g_k$ where $g_x$ denotes the percentage growth of variable $x$.
+
+    \item[c.] In his foreword, \href{https://commission.europa.eu/document/download/97e481fd-2dc3-412d-be4c-f152a8232961_en?filename=The\%20future\%20of\%20European\%20competitiveness\%20\_\%20A\%20competitiveness\%20strategy\%20for\%20Europe.pdf}{Draghi (2024)} writes: "Across different metrics, a wide gap in GDP has opened up between the EU and the US, driven mainly by a more pronounced slowdown in productivity growth in Europe. Europe’s households have paid the price in foregone living standards. On a per capita basis, real disposable income has grown almost twice as much in the US as in the EU since 2000." Do your calculations support this statement?
+\end{itemize}
+
+
+
+\section{An increase in the labor force (1 p)}
+(Exercise 4 in Jones chapter 5)
+Consider a onetime change in government policy that immediately and permanently increases the level of the labor force in an economy (such as a more generous immigration policy). In particular, suppose it rises permanently from $L$ to $L'$. Assuming the economy starts in its initial steady stae, use the Solow model to explain what happens to the economy over time and in the long run. In particular, comment on what happens to the level and growth rate of per capita GDP. (\emph{Hint:} Think about what happens to $k_0=K_0/L_0$ when the labor force increases.) 
+
+
+
+\section*{Recommended extra exercises }
+Do not hand in solutions to the exercises below! Exercises marked by a * are solved in the textbook. Other exercises may be discussed in your sessions if time allows. 
+
+\begin{itemize}
+    \item Jones chapter 2: Exercises *2, 3 and 9
+    \item Jones chapter 3: Exercises 1, 8, 9 and 10
+    \item Jones chapter 4: Exercises *1, 2 and *3 
+    \item Jones chapter 5: Exercise 1, *3
+\end{itemize}
+
+\end{document}
