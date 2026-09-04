@@ -1,0 +1,9 @@
+---
+title: "EC2211 AI Course Assistant"
+format: html
+include-in-header:
+  text: |
+    <meta http-equiv="refresh" content="0; url=https://github.com/copilot/spaces/flodenm/1">
+---
+
+If you are not redirected automatically, [click here](https://github.com/copilot/spaces/flodenm/1).
