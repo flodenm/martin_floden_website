@@ -1,5 +1,5 @@
 ---
-title: "EC2211 AI Course Assistant"
+title: "EC2211 Course Assistant"
 format: html
 include-in-header:
   text: |
