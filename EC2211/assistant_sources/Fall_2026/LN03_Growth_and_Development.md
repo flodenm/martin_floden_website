@@ -2,7 +2,10 @@
 
 **Course:** EC2211 Intermediate Macroeconomics, Stockholm University  
 **Instructor:** Martin Flodén  
-**Course version:** Fall 2026 (authoritative)
+**Course version:** Fall 2026 (authoritative)  
+**Document identifier:** EC2211 Fall 2026 LN03  
+**Aliases:** LN3, LN03, Lecture 3, Lecture Notes 3  
+**Source availability:** This is the authoritative Fall 2026 LN3 source. If this file is attached to the Space, LN3 is available.
 
 This file is an agent-oriented rendering of the final Fall 2026 lecture source. Headings reproduce section and frame titles. Figure notes and nearby text should be used when answering questions about visuals.
 
@@ -24,7 +27,10 @@ We now use and extend the Solow model to ask:
 
 ### Extending the basic Solow model
 
-In Lecture 2, we assumed that labor input and TFP were constant: $$Y_t=AK_t^\alpha L^{1-\alpha}.$$
+In Lecture 2, we assumed that labor input and TFP were constant: 
+
+> $Y_t=AK_t^\alpha L^{1-\alpha}.$
+
 
 We now extend the model in several steps:
 
@@ -60,23 +66,27 @@ Literature:
 
 ### The basic Solow model
 
-Recall the assumptions from Lecture 2: $$\begin{aligned}
-        Y_t &= AK_t^\alpha L_t^{1-\alpha}, \\[2mm]
-        K_{t+1} &= (1-\delta)K_t+sY_t.
-    
-\end{aligned}$$
+Recall the assumptions from Lecture 2: 
 
-Define output and capital per unit of labor: $$y_t\equiv\frac{Y_t}{L_t},
-        \qquad
-        k_t\equiv\frac{K_t}{L_t}.$$
+> $\begin{aligned} Y_t &= AK_t^\alpha L_t^{1-\alpha}, \\[2mm] K_{t+1} &= (1-\delta)K_t+sY_t. \end{aligned}$
 
-The production function per unit of labor is $$
-        y_t=Ak_t^\alpha.$$
+
+Define output and capital per unit of labor: 
+
+> $y_t\equiv\frac{Y_t}{L_t}, \qquad k_t\equiv\frac{K_t}{L_t}.$
+
+
+The production function per unit of labor is 
+
+> $y_t=Ak_t^\alpha.$
+
 
 ### A growing labor force
 
-Let labor input grow at the constant rate $n$: $$
-        L_{t+1}=(1+n)L_t.$$
+Let labor input grow at the constant rate $n$: 
+
+> $L_{t+1}=(1+n)L_t.$
+
 
 - We interpret $L_t$ as the number of workers
 
@@ -88,24 +98,31 @@ When $L$ grows, some investment is required simply to provide new workers with c
 
 ### Capital accumulation per worker
 
-Divide the law of motion for capital by $L_t$: $$\frac{K_{t+1}}{L_t}
-        =(1-\delta)\frac{K_t}{L_t}
-        +s\frac{Y_t}{L_t}.$$
+Divide the law of motion for capital by $L_t$: 
 
-Since $$\frac{K_{t+1}}{L_t}
-        =\frac{L_{t+1}}{L_t}\frac{K_{t+1}}{L_{t+1}}
-        =(1+n)k_{t+1},$$ we obtain the exact law of motion $$
-        (1+n)k_{t+1}=(1-\delta)k_t+sy_t.$$
+> $\frac{K_{t+1}}{L_t} =(1-\delta)\frac{K_t}{L_t} +s\frac{Y_t}{L_t}.$
+
+
+Since 
+
+> $\frac{K_{t+1}}{L_t} =\frac{L_{t+1}}{L_t}\frac{K_{t+1}}{L_{t+1}} =(1+n)k_{t+1},$
+
+ we obtain the exact law of motion 
+
+> $(1+n)k_{t+1}=(1-\delta)k_t+sy_t.$
+
 
 ### Investment and break-even investment
 
-Rearranging equation (capital_per_worker_law) gives $$
-        k_{t+1}-k_t
-        =\frac{sy_t-(\delta+n)k_t}{1+n}.$$
+Rearranging equation (capital_per_worker_law) gives 
 
-The direction of movement is therefore determined by the comparison between $$\underbrace{sy_t}_{\text{investment per worker}}
-        \qquad\text{and}\qquad
-        \underbrace{(\delta+n)k_t}_{\text{break-even investment}}.$$
+> $k_{t+1}-k_t =\frac{sy_t-(\delta+n)k_t}{1+n}.$
+
+
+The direction of movement is therefore determined by the comparison between 
+
+> $\underbrace{sy_t}_{\text{investment per worker}} \qquad\text{and}\qquad \underbrace{(\delta+n)k_t}_{\text{break-even investment}}.$
+
 
 - $\delta k_t$ replaces depreciated capital
 
@@ -113,11 +130,15 @@ The direction of movement is therefore determined by the comparison between $$\u
 
 ### Steady state with population growth
 
-In steady state, $k_{t+1}=k_t=k^*$. Equation (change_capital_per_worker) then implies $$sy^*=(\delta+n)k^*.$$
+In steady state, $k_{t+1}=k_t=k^*$. Equation (change_capital_per_worker) then implies 
 
-Using $y^* = A(k^*)^\alpha$ and solving for steady-state capital per worker gives $$
-        k^*
-        =\left(\frac{sA}{\delta+n}\right)^{\frac{1}{1-\alpha}}.$$
+> $sy^*=(\delta+n)k^*.$
+
+
+Using $y^* = A(k^*)^\alpha$ and solving for steady-state capital per worker gives 
+
+> $k^* =\left(\frac{sA}{\delta+n}\right)^{\frac{1}{1-\alpha}}.$
+
 
 Thus, $k^*$ is
 
@@ -127,10 +148,10 @@ Thus, $k^*$ is
 
 ### Steady-state output per worker
 
-Substitute equation (steady_state_capital_population) into $y^*=A(k^*)^\alpha$: $$
-        y^*
-        =A^{\frac{1}{1-\alpha}}
-         \left(\frac{s}{\delta+n}\right)^{\frac{\alpha}{1-\alpha}}.$$
+Substitute equation (steady_state_capital_population) into $y^*=A(k^*)^\alpha$: 
+
+> $y^* =A^{\frac{1}{1-\alpha}} \left(\frac{s}{\delta+n}\right)^{\frac{\alpha}{1-\alpha}}.$
+
 
 - Faster population growth lowers the steady-state level of output per worker
 
@@ -197,8 +218,10 @@ Population growth allows aggregate output to grow, but output per worker is cons
 
 Capital accumulation by itself cannot generate sustained growth in output per worker because capital has a diminishing marginal product.
 
-But assume that TFP grows over time: $$
-        A_{t+1}=(1+g_A)A_t.$$
+But assume that TFP grows over time: 
+
+> $A_{t+1}=(1+g_A)A_t.$
+
 
 The rate $g_A$ is exogenous: the Solow model now allows for technological progress but does not explain its source.
 
@@ -206,32 +229,50 @@ The rate $g_A$ is exogenous: the Solow model now allows for technological progre
 
 Balanced growth path Along a balanced growth path, each variable grows at a constant rate (or is constant). Different variables need not grow at the same rate.
 
-Recall that $$\frac{K_{t+1}-K_t}{K_t}
-        =s\frac{Y_t}{K_t}-\delta.$$
+Recall that 
 
-The growth rate of capital can be constant only if $Y_t/K_t$ is constant. Output and capital must therefore grow at the same rate along a balanced growth path. Denote this common rate by $\gamma$: $$g_Y=g_K=\gamma.$$
+> $\frac{K_{t+1}-K_t}{K_t} =s\frac{Y_t}{K_t}-\delta.$
+
+
+The growth rate of capital can be constant only if $Y_t/K_t$ is constant. Output and capital must therefore grow at the same rate along a balanced growth path. Denote this common rate by $\gamma$: 
+
+> $g_Y=g_K=\gamma.$
+
 
 Since $C_t=(1-s)Y_t$, consumption also grows at rate $\gamma$.
 
 ### Growth rates along the balanced growth path
 
-Growth accounting for aggregate output gives $$
-        g_Y = g_A+\alpha g_K+(1-\alpha)g_L.$$
+Growth accounting for aggregate output gives 
 
-Along the balanced growth path, $$g_Y=g_K=\gamma,
-        \qquad
-        g_L=n.$$
+> $g_Y = g_A+\alpha g_K+(1-\alpha)g_L.$
 
-Substituting into equation (aggregate_growth_accounting_bgp) gives $$\gamma = g_A+\alpha\gamma+(1-\alpha)n,$$ and therefore $$
-        \gamma =  n+\frac{g_A}{1-\alpha}.$$
+
+Along the balanced growth path, 
+
+> $g_Y=g_K=\gamma, \qquad g_L=n.$
+
+
+Substituting into equation (aggregate_growth_accounting_bgp) gives 
+
+> $\gamma = g_A+\alpha\gamma+(1-\alpha)n,$
+
+ and therefore 
+
+> $\gamma =  n+\frac{g_A}{1-\alpha}.$
+
 
 ### Growth per worker
 
-Since $y=Y/L$, output per worker grows at the rate $$
-        g_y =  g_Y-g_L
-        = \frac{g_A}{1-\alpha}.$$
+Since $y=Y/L$, output per worker grows at the rate 
 
-Capital and consumption per worker grow at the same rate: $$g_k=g_y=g_c = \frac{g_A}{1-\alpha}.$$
+> $g_y =  g_Y-g_L = \frac{g_A}{1-\alpha}.$
+
+
+Capital and consumption per worker grow at the same rate: 
+
+> $g_k=g_y=g_c = \frac{g_A}{1-\alpha}.$
+
 
 TFP growth raises output directly and also induces capital deepening. This is why output per worker grows faster than TFP along the balanced growth path.
 
@@ -263,9 +304,10 @@ The model explains how the economy responds to TFP growth, but not why TFP grows
 
 ### Can physical capital explain income differences?
 
-If countries have the same TFP, the production function predicts $$\frac{y_i}{y_{\mathrm{US}}}
-        =
-        \left(\frac{k_i}{k_{\mathrm{US}}}\right)^\alpha.$$
+If countries have the same TFP, the production function predicts 
+
+> $\frac{y_i}{y_{\mathrm{US}}} = \left(\frac{k_i}{k_{\mathrm{US}}}\right)^\alpha.$
+
 
 The parameter $\alpha$ is not free:
 
@@ -305,28 +347,30 @@ Is there another input that behaves like capital but is compensated as labor?
 
 Let $h_t$ denote human capital per worker. Effective labor input is then $h_tL_t$.
 
-Extend the production function to $$
-        Y_t=A_tK_t^\alpha(h_tL_t)^{1-\alpha}.$$
+Extend the production function to 
 
-Dividing by $L_t$ gives output per worker: $$
-        y_t=A_tk_t^\alpha h_t^{1-\alpha}.$$
+> $Y_t=A_tK_t^\alpha(h_tL_t)^{1-\alpha}.$
+
+
+Dividing by $L_t$ gives output per worker: 
+
+> $y_t=A_tk_t^\alpha h_t^{1-\alpha}.$
+
 
 Human capital makes each worker more productive without changing the physical-capital share $\alpha$.
 
 ### From schooling to human capital
 
-A simple human-capital production function is $$h=e^{\psi u},$$ where $u$ is years of schooling. If $\psi=0.10$, another year of schooling raises human capital by approximately 10 percent.
+A simple human-capital production function is 
 
-The Penn World Table uses the same idea, but allows the assumed return to decline with years of schooling: $$h=e^{\phi(u)}, \qquad
-    \phi(u)=
-    \begin{cases}
-        0.134u,
-            & u\leq 4,\\[1mm]
-        0.134(4)+0.101(u-4),
-            & 4<u\leq 8,\\[1mm]
-        0.134(4)+0.101(4)+0.068(u-8),
-            & u>8.
-    \end{cases}$$
+> $h=e^{\psi u},$
+
+ where $u$ is years of schooling. If $\psi=0.10$, another year of schooling raises human capital by approximately 10 percent.
+
+The Penn World Table uses the same idea, but allows the assumed return to decline with years of schooling: 
+
+> $h=e^{\phi(u)}, \qquad \phi(u)= \begin{cases} 0.134u, & u\leq 4,\\[1mm] 0.134(4)+0.101(u-4), & 4<u\leq 8,\\[1mm] 0.134(4)+0.101(4)+0.068(u-8), & u>8. \end{cases}$
+
 
 Thus, $\psi=0.10$ is a useful approximation, but PWT assumes lower returns to schooling beyond eight years.
 
@@ -355,7 +399,10 @@ A measure based only on years of schooling will not capture changes in the quali
 | Mexico | 9.6 | 2.85 | 0.82 |
 | Malawi | 6.2 | 2.14 | 0.68 |
 
-The final column uses $\alpha=1/3$ and reports $$\left(\frac{h_i}{h_{\mathrm{US}}}\right)^{1-\alpha}.$$
+The final column uses $\alpha=1/3$ and reports 
+
+> $\left(\frac{h_i}{h_{\mathrm{US}}}\right)^{1-\alpha}.$
+
 
 It shows the output difference predicted by human capital alone, holding TFP and physical capital constant.
 
@@ -363,13 +410,17 @@ Differences in schooling can thus generate meaningful differences in output per 
 
 ### Why did $\alpha=2/3$ fit better?
 
-After adding human capital, production per worker is $$y=A k^{1/3}h^{2/3}.$$
+After adding human capital, production per worker is 
+
+> $y=A k^{1/3}h^{2/3}.$
+
 
 Countries with more physical capital per worker also tend to have more human capital. If human capital is omitted, physical capital may therefore appear to explain both.
 
-For illustration, suppose that $h=\sqrt{k}$. Then $$y
-        =A k^{1/3}\left(k^{1/2}\right)^{2/3}
-        =A k^{2/3}.$$
+For illustration, suppose that $h=\sqrt{k}$. Then 
+
+> $y =A k^{1/3}\left(k^{1/2}\right)^{2/3} =A k^{2/3}.$
+
 
 The better fit of the high-$\alpha$ curve does not mean that physical capital receives two-thirds of GDP. It may instead reflect that physical and human capital are positively related across countries.
 
@@ -379,28 +430,29 @@ The better fit of the high-$\alpha$ curve does not mean that physical capital re
 
 **Development accounting** uses a production function to ask how much of the differences in GDP per person across countries can be attributed to differences in measured inputs.
 
-For the empirical comparison, let $H$ denote total annual hours worked: $$Y=AK^\alpha(hH)^{1-\alpha}.$$
+For the empirical comparison, let $H$ denote total annual hours worked: 
 
-Dividing by population gives $$
-        \frac{Y}{N}
-        =
-        A\left(\frac{K}{N}\right)^\alpha
-        h^{1-\alpha}
-        \left(\frac{H}{N}\right)^{1-\alpha}.$$
+> $Y=AK^\alpha(hH)^{1-\alpha}.$
+
+
+Dividing by population gives 
+
+> $\frac{Y}{N} = A\left(\frac{K}{N}\right)^\alpha h^{1-\alpha} \left(\frac{H}{N}\right)^{1-\alpha}.$
+
 
 Here $H/N=(H/E)(E/N)$ combines hours per worker and employment per person.
 
 ### TFP as a development-accounting residual
 
-Measure all variables relative to the United States. If productivity were the same in every country, measured inputs would imply $$\widehat{Y/N}
-        =
-        \left(\frac{K}{N}\right)^\alpha
-        h^{1-\alpha}
-        \left(\frac{H}{N}\right)^{1-\alpha}.$$
+Measure all variables relative to the United States. If productivity were the same in every country, measured inputs would imply 
 
-The productivity needed to match actual GDP per person is therefore $$\frac{A}{A_{\mathrm{US}}}
-        =
-        \frac{Y/N}{\widehat{Y/N}}.$$
+> $\widehat{Y/N} = \left(\frac{K}{N}\right)^\alpha h^{1-\alpha} \left(\frac{H}{N}\right)^{1-\alpha}.$
+
+
+The productivity needed to match actual GDP per person is therefore 
+
+> $\frac{A}{A_{\mathrm{US}}} = \frac{Y/N}{\widehat{Y/N}}.$
+
 
 - Technology and production methods
 
@@ -441,9 +493,10 @@ Accounting organizes the facts. A theory is needed to explain why investment, ed
 
 Development accounting compares income levels at one date. The Solow model also has implications for how those differences evolve over time.
 
-Consider economies with the same $s$, $n$, $\delta$, $A$, and human capital, but different initial levels of capital per worker. From equation (change_capital_per_worker), $$
-        \frac{k_{t+1}-k_t}{k_t}
-        =\frac{sA k_t^{\alpha-1}-(\delta+n)}{1+n}.$$
+Consider economies with the same $s$, $n$, $\delta$, $A$, and human capital, but different initial levels of capital per worker. From equation (change_capital_per_worker), 
+
+> $\frac{k_{t+1}-k_t}{k_t} =\frac{sA k_t^{\alpha-1}-(\delta+n)}{1+n}.$
+
 
 Since $\alpha<1$, $k_t^{\alpha-1}$ is larger when $k_t$ is smaller.
 
@@ -549,22 +602,27 @@ What determines whether output per person can continue to grow when one producti
 
 ### Land in fixed supply
 
-Let $D$ denote a fixed quantity of land: $$
-        Y_t=A_tK_t^\alpha D^\lambda
-            L_t^{1-\alpha-\lambda},
-        \qquad \alpha+\lambda<1.$$
+Let $D$ denote a fixed quantity of land: 
 
-Growth accounting gives $$g_Y = g_A+\alpha g_K+\lambda g_D
-                   +(1-\alpha-\lambda)g_L.$$
+> $Y_t=A_tK_t^\alpha D^\lambda L_t^{1-\alpha-\lambda}, \qquad \alpha+\lambda<1.$
 
-Since $g_D=0$, $g_L=n$, and $g_Y=g_K=\gamma$ on a balanced growth path, $$
-        g_{Y/L}=\gamma-n
-        = \frac{g_A-\lambda n}{1-\alpha}.$$
+
+Growth accounting gives 
+
+> $g_Y = g_A+\alpha g_K+\lambda g_D +(1-\alpha-\lambda)g_L.$
+
+
+Since $g_D=0$, $g_L=n$, and $g_Y=g_K=\gamma$ on a balanced growth path, 
+
+> $g_{Y/L}=\gamma-n = \frac{g_A-\lambda n}{1-\alpha}.$
+
 
 ### Interpreting the role of land
 
-Equation (growth_land) shows that $$g_{Y/L} = \frac{g_A}{1-\alpha}
-        -\frac{\lambda}{1-\alpha}n.$$
+Equation (growth_land) shows that 
+
+> $g_{Y/L} = \frac{g_A}{1-\alpha} -\frac{\lambda}{1-\alpha}n.$
+
 
 - Population growth reduces land per worker
 
@@ -576,25 +634,33 @@ A fixed factor limits growth but does not necessarily eliminate it.
 
 ### An exhaustible natural resource
 
-Let $R_t$ be the remaining resource stock and let the flow used in production be $$X_t=uR_t,$$ where the extraction rate $u$ is constant. The stock develops according to $$R_{t+1}=(1-u)R_t.$$
+Let $R_t$ be the remaining resource stock and let the flow used in production be 
 
-Production is $$
-        Y_t=A_tK_t^\alpha X_t^\beta
-            L_t^{1-\alpha-\beta},
-        \qquad \alpha+\beta<1.$$
+> $X_t=uR_t,$
+
+ where the extraction rate $u$ is constant. The stock develops according to 
+
+> $R_{t+1}=(1-u)R_t.$
+
+
+Production is 
+
+> $Y_t=A_tK_t^\alpha X_t^\beta L_t^{1-\alpha-\beta}, \qquad \alpha+\beta<1.$
+
 
 Since $u$ is constant, the resource flow $X_t$ declines at rate $u$.
 
 ### Can growth continue as the resource is depleted?
 
-Along a balanced growth path, $$g_Y=g_K=\gamma,
-        \qquad g_L=n,
-        \qquad g_X=-u.$$
+Along a balanced growth path, 
 
-Applying growth accounting to equation (production_resource) gives $$
-        g_{Y/L}=\gamma-n
-        =
-        \frac{g_A-\beta(n+u)}{1-\alpha}.$$
+> $g_Y=g_K=\gamma, \qquad g_L=n, \qquad g_X=-u.$
+
+
+Applying growth accounting to equation (production_resource) gives 
+
+> $g_{Y/L}=\gamma-n = \frac{g_A-\beta(n+u)}{1-\alpha}.$
+
 
 - Depletion and population growth are drags on output per worker
 
