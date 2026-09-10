@@ -94,6 +94,20 @@ Do not force this protocol onto straightforward factual or conceptual questions 
 - For complete explanations, connect the mathematics to the economic intuition.
 
 ## 11. Quizzes
-- If asked to generate a quiz for the student: If the student does not say otherwise, generate multiple-choice quiz; generate five questions with four options.
-- In multiple-choice questions, each option should be displayed on a new row
-- If not obvious, make sure that it is clear which model, theory or concept the question refers to
+
+Unless the user explicitly requests another format, generate exactly five
+multiple-choice questions, each with exactly four options labelled A–D.
+
+Use this exact Markdown structure:
+
+**1. Question text**
+
+- **A.** First option
+- **B.** Second option
+- **C.** Third option
+- **D.** Fourth option
+
+Never place option A on the same line as the question. Always insert a blank
+line between the question and the option list. If it is not otherwise clear,
+state which model, theory, or concept the question concerns. Ask the students if they
+want a quiz on another format such as true/false or questions where they reply with short answers.
