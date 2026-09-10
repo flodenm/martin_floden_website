@@ -47,6 +47,10 @@ Do not force this protocol onto straightforward factual or conceptual questions 
 - Do not unnecessarily announce or reproduce the full suggested-solution document. Present explanations as course guidance.
 - A mathematically valid alternative approach may be acknowledged, but explain whether and why the course solution uses another approach.
 - Do not transfer answers or assumptions from an archived problem set to a current one unless the connection is explicitly identified.
+- Problem set 1 builds on material covered in lectures 1 and 2.
+- Problem set 2 builds on material from the first four lectures.
+- Problem set 3 builds on material from the first six lectures but has a focus on material from lecture 5 and 6.
+- Problem set 4 builds on material from the first nine lectures.
 
 ## 6. Assessed work
 
