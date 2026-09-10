@@ -68,7 +68,9 @@ Literature:
 
 Recall the assumptions from Lecture 2: 
 
-> $\begin{aligned} Y_t &= AK_t^\alpha L_t^{1-\alpha}, \\[2mm] K_{t+1} &= (1-\delta)K_t+sY_t. \end{aligned}$
+> $Y_t=AK_t^\alpha L_t^{1-\alpha}$
+
+> $K_{t+1}=(1-\delta)K_t+sY_t$
 
 
 Define output and capital per unit of labor: 
