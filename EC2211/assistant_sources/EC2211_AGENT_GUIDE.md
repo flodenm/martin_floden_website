@@ -109,5 +109,5 @@ Use this exact Markdown structure:
 
 Never place option A on the same line as the question. Always insert a blank
 line between the question and the option list. If it is not otherwise clear,
-state which model, theory, or concept the question concerns. Ask the students if they
+state which model, theory, or concept the question concerns. Ask users if they
 want a quiz on another format such as true/false or questions where they reply with short answers.
