@@ -9,6 +9,7 @@ This index identifies the authoritative Fall 2026 sources attached to **EC2211 C
 - **LN3 / LN03 / Lecture 3:** `LN03_Growth_and_Development.md`
 - **LN4 / LN04 / Lecture 4:** `LN04_Growth_Beyond_Solow.md`
 - **LN5a / LN05a / Lecture 5a:** `LN05a_Labor_Supply_and_Unemployment.md`
+- **LN5b / LN05b / Lecture 5b:** `LN05b_Consumption_and_Investment.md`
 
 ## Problem sets and suggested solutions
 
