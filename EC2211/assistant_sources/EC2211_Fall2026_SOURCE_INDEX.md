@@ -8,6 +8,7 @@ This index identifies the authoritative Fall 2026 sources attached to **EC2211 C
 - **LN2 / LN02 / Lecture 2:** `LN02_Production_and_Solow.md`
 - **LN3 / LN03 / Lecture 3:** `LN03_Growth_and_Development.md`
 - **LN4 / LN04 / Lecture 4:** `LN04_Growth_Beyond_Solow.md`
+- **LN5a / LN05a / Lecture 5a:** `LN05a_Labor_Supply_and_Unemployment.md`
 
 ## Problem sets and suggested solutions
 
