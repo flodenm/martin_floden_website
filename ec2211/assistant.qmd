@@ -1,0 +1,7 @@
+---
+title: "EC2211 Course Assistant"
+format: html
+include-in-header:
+  text: |
+    <meta http-equiv="refresh" content="0; url=https://github.com/copilot/spaces/flodenm/1">
+---
