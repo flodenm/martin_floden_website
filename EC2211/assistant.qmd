@@ -3,7 +3,9 @@ title: "EC2211 Course Assistant"
 format: html
 include-in-header:
   text: |
-    <meta http-equiv="refresh" content="0; url=https://github.com/copilot/spaces/flodenm/1">
+    <meta http-equiv="refresh" content="0; url=https://martinfloden.net/ec2211/assistant.html">
+    <link rel="canonical" href="https://martinfloden.net/ec2211/assistant.html">
 ---
 
-If you are not redirected automatically, [click here](https://github.com/copilot/spaces/flodenm/1).
+The course-assistant page has moved to
+[martinfloden.net/ec2211/assistant.html](https://martinfloden.net/ec2211/assistant.html).
