@@ -4,7 +4,6 @@ project:
 resources:
   - files
   - images
-  - EC7210
   - RBfiles
   - EC2211
   - ec2211
