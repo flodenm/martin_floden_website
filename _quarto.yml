@@ -8,6 +8,7 @@ resources:
   - EC2211
   - ec2211
   - EC7210
+  - ec7210
 
 website:
   search: false
