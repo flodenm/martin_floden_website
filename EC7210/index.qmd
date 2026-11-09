@@ -10,12 +10,12 @@ format:
           </style>
 ---
 
-This page provides supplementary code for EC7210 Macroeconomics, a
+This page provides supplementary material for EC7210 Macroeconomics, a
 first-semester course in the Master's Program in Economics at Stockholm
 University, taught in fall 2026. Course information, lecture notes, and
 slides are available on the [course page in Canvas](https://canvas.su.se/courses/13560).
 
-## Lecture 2 — Ramsey model
+## Lecture Notes 2 — Ramsey model
 
 The scripts compute the transition from a given initial capital stock to
 the steady state with constant productivity and population. They also
@@ -24,7 +24,7 @@ plot the transition path in the phase diagram.
 - [MATLAB version (RamseyModel.m)](RamseyModel.m){download=""}
 - [Python version (RamseyModel.py)](RamseyModel.py){download=""}
 
-## LN4 — Real business cycle (RBC) models
+## Lecture Notes 4 — Real business cycle (RBC) models
 
 The impulse-response scripts compute the responses illustrated in
 Figures 1 and 2 of Lecture Notes 4. To compare the two calibrations,
