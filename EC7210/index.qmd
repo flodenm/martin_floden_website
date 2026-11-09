@@ -3,13 +3,14 @@ title: "EC7210 Macroeconomics"
 ---
 
 ## Lecture 2 — Ramsey model
-
-- [MATLAB](RamseyModel.m){download=""}
-- [Python](RamseyModel.py){download=""}
+Code to find the economy's transition from any initial capital stock to its balanced growth path. The economy here is normalized by productivity A and population L, so we look for the transition to the transformed economy's steady state. The code also generates a phase diagram with the saddle-path movement to the steady state.
+- [MATLAB version: RamseyModel.m](RamseyModel.m){download=""}
+- [Python version: RamseyModel.py](RamseyModel.py){download=""}
 
 ## LN4 — Real business cycle (RBC) models
+This is the code for the core RBC model. The codes for impulse responses reproduces figures 1 and 2 in Lecture Notes 4. The code that includes simulations also simulates the model, shows a sample from the simulation, and reporduces the simulation part of table 1 in the lecture notes.
 
 | Material | MATLAB | Python |
 |:---------|:-------|:-------|
-| Impulse responses | [Download](rbc_ir.m){download=""} | [Download](rbc_ir.py){download=""} |
-| Simulation | [Download](rbc_with_simulation.m){download=""} | [Download](rbc_with_simulation.py){download=""} |
+| Impulse responses | [rbc_ir.m](rbc_ir.m){download=""} | [rbc_ir.py](rbc_ir.py){download=""} |
+| Simulation | [rbc_with_simulation.m](rbc_with_simulation.m){download=""} | [rbc_with_simulation.py](rbc_with_simulation.py){download=""} |
