@@ -1,14 +1,36 @@
 ---
 title: "EC7210 Macroeconomics"
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+            h1.title { font-size: 2rem; }
+            #quarto-document-content h2 { font-size: 1.4rem; }
+          </style>
 ---
 
+This page provides supplementary code for EC7210 Macroeconomics, a
+first-semester course in the Master's Program in Economics at Stockholm
+University, taught in fall 2026. Course information, lecture notes, and
+slides are available on the [course page in Canvas](https://canvas.su.se/courses/13560).
+
 ## Lecture 2 — Ramsey model
-Code to find the economy's transition from any initial capital stock to its balanced growth path. The economy here is normalized by productivity A and population L, so we look for the transition to the transformed economy's steady state. The code also generates a phase diagram with the saddle-path movement to the steady state.
-- [MATLAB version: RamseyModel.m](RamseyModel.m){download=""}
-- [Python version: RamseyModel.py](RamseyModel.py){download=""}
+
+The scripts compute the transition from a given initial capital stock to
+the steady state with constant productivity and population. They also
+plot the transition path in the phase diagram.
+
+- [MATLAB version (RamseyModel.m)](RamseyModel.m){download=""}
+- [Python version (RamseyModel.py)](RamseyModel.py){download=""}
 
 ## LN4 — Real business cycle (RBC) models
-This is the code for the core RBC model. The codes for impulse responses reproduces figures 1 and 2 in Lecture Notes 4. The code that includes simulations also simulates the model, shows a sample from the simulation, and reporduces the simulation part of table 1 in the lecture notes.
+
+The impulse-response scripts compute the responses illustrated in
+Figures 1 and 2 of Lecture Notes 4. To compare the two calibrations,
+run the script with different values of the labor-supply parameter
+$\gamma$. The simulation scripts plot a short sample from the simulated
+economy and compute the model moments reported in Table 1.
 
 | Material | MATLAB | Python |
 |:---------|:-------|:-------|
