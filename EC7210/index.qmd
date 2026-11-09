@@ -1,0 +1,15 @@
+---
+title: "EC7210 Macroeconomics"
+---
+
+## Lecture 2 — Ramsey model
+
+- [MATLAB](RamseyModel.m){download=""}
+- [Python](RamseyModel.py){download=""}
+
+## LN4 — Real business cycle (RBC) models
+
+| Material | MATLAB | Python |
+|:---------|:-------|:-------|
+| Impulse responses | [Download](rbc_ir.m){download=""} | [Download](rbc_ir.py){download=""} |
+| Simulation | [Download](rbc_with_simulation.m){download=""} | [Download](rbc_with_simulation.py){download=""} |
