@@ -1,197 +1,54 @@
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Course information and resources for EC7210 Macroeconomics, Fall 2026.">
-  <title>EC7210 Macroeconomics</title>
-  <style>
-    :root {
-      color-scheme: light dark;
-      --background: #ffffff;
-      --text: #222222;
-      --muted: #5b6470;
-      --link: #0757a6;
-      --border: #d9dee5;
-    }
+---
+title: "EC7210 Macroeconomics"
+subtitle: "Fall 2026"
+---
 
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --background: #17191c;
-        --text: #eeeeee;
-        --muted: #b6bec8;
-        --link: #7db9f2;
-        --border: #3b4149;
-      }
-    }
+This page provides supplementary material for EC7210 Macroeconomics, a
+first-semester course in the Master's Program in Economics at Stockholm
+University.
 
-    * {
-      box-sizing: border-box;
-    }
+Stockholm University [course information](https://www.su.se/english/education/course-catalogue/ec/ec7210).
 
-    body {
-      margin: 0;
-      background: var(--background);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        Helvetica, Arial, sans-serif;
-      font-size: 1rem;
-      line-height: 1.6;
-    }
+Lecture notes and slides are available on the [course page in Canvas](https://canvas.su.se/courses/13560).
 
-    main {
-      width: min(100% - 2rem, 760px);
-      margin: 0 auto;
-      padding: 3rem 0 4rem;
-    }
+## Lecture Notes 2: The Ramsey model
 
-    h1 {
-      margin: 0 0 0.25rem;
-      font-size: clamp(1.8rem, 4vw, 2.4rem);
-      line-height: 1.2;
-    }
+The scripts compute the transition from a given initial capital stock to
+the steady state with constant productivity and population. They also
+plot the transition path in the phase diagram.
 
-    h2 {
-      margin: 2.25rem 0 0.75rem;
-      padding-bottom: 0.35rem;
-      border-bottom: 1px solid var(--border);
-      font-size: 1.25rem;
-    }
+- [MATLAB version (RamseyModel.m)](RamseyModel.m){download=""}
+- [Python version (RamseyModel.py)](RamseyModel.py){download=""}
 
-    p {
-      margin: 0.75rem 0;
-    }
+## Lecture Notes 4: The RBC model
 
-    .meta {
-      margin-top: 0;
-      color: var(--muted);
-    }
+The impulse-response scripts compute the responses illustrated in
+Figures 1 and 2 of Lecture Notes 4. To compare the two calibrations,
+run the script with different values of the labor-supply parameter
+$\gamma$. The simulation scripts plot a short sample from the simulated
+economy and compute the model moments reported in Table 1.
 
-    ul {
-      margin: 0.75rem 0;
-      padding-left: 1.4rem;
-    }
+| Material | MATLAB | Python |
+|:---------|:-------|:-------|
+| Impulse responses | [rbc_ir.m](rbc_ir.m){download=""} | [rbc_ir.py](rbc_ir.py){download=""} |
+| Simulation | [rbc_with_simulation.m](rbc_with_simulation.m){download=""} | [rbc_with_simulation.py](rbc_with_simulation.py){download=""} |
 
-    li + li {
-      margin-top: 0.6rem;
-    }
+## Macroeconomic data
 
-    a {
-      color: var(--link);
-      text-underline-offset: 0.15em;
-    }
-
-    a:hover,
-    a:focus-visible {
-      text-decoration-thickness: 2px;
-    }
-
-    table {
-      width: 100%;
-      margin: 0.75rem 0;
-      border-collapse: collapse;
-    }
-
-    th,
-    td {
-      padding: 0.4rem 0.75rem 0.4rem 0;
-      border-bottom: 1px solid var(--border);
-      text-align: left;
-    }
-
-    th {
-      font-weight: 600;
-    }
-  </style>
-</head>
-<body>
-  <main>
-    <header>
-      <h1>EC7210 Macroeconomics</h1>
-      <p class="meta">Fall 2026</p>
-    </header>
-
-    <p>
-      This page provides supplementary material for EC7210 Macroeconomics, a
-      first-semester course in the Master's Program in Economics at Stockholm
-      University.
-    </p>
-
-    <p>
-      Stockholm University
-      <a href="https://www.su.se/english/education/course-catalogue/ec/ec7210">course information</a>.
-    </p>
-
-    <p>
-      Lecture notes and slides are available on the <a href="https://canvas.su.se/courses/13560">course page in Canvas</a>.
-    </p>
-
-    <h2>Lecture Notes 2: The Ramsey model</h2>
-    <p>
-      The scripts compute the transition from a given initial capital stock to
-      the steady state with constant productivity and population. They also
-      plot the transition path in the phase diagram.
-    </p>
-    <ul>
-      <li><a href="RamseyModel.m" download>MATLAB version (RamseyModel.m)</a></li>
-      <li><a href="RamseyModel.py" download>Python version (RamseyModel.py)</a></li>
-    </ul>
-
-    <h2>Lecture Notes 4: The RBC model</h2>
-    <p>
-      The impulse-response scripts compute the responses illustrated in Figures 1 and 2 of Lecture Notes 4. To compare the two calibrations,
-      run the script with different values of the labor-supply parameter <var>γ</var>. The simulation scripts plot a short sample from the simulated
-      economy and compute the model moments reported in Table 1.
-    </p>
-    <table>
-      <thead>
-        <tr>
-          <th scope="col">Material</th>
-          <th scope="col">MATLAB</th>
-          <th scope="col">Python</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Impulse responses</td>
-          <td><a href="rbc_ir.m" download>rbc_ir.m</a></td>
-          <td><a href="rbc_ir.py" download>rbc_ir.py</a></td>
-        </tr>
-        <tr>
-          <td>Simulation</td>
-          <td><a href="rbc_with_simulation.m" download>rbc_with_simulation.m</a></td>
-          <td><a href="rbc_with_simulation.py" download>rbc_with_simulation.py</a></td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h2>Macroeconomic data</h2>
-    <ul>
-      <li>
-        <strong>International organizations:</strong>
-        <a href="https://data-explorer.oecd.org/">OECD Data Explorer</a>,
-        <a href="https://www.imf.org/en/Publications/SPROLLs/world-economic-outlook-databases">IMF World Economic Outlook</a>,
-        <a href="https://data.worldbank.org/">World Bank</a> and
-        <a href="https://data.bis.org/">BIS</a>
-      </li>
-      <li>
-        <strong>Statistical agencies:</strong>
-        <a href="https://www.statistikdatabasen.scb.se/pxweb/en/ssd/">Statistics Sweden</a>,
-        <a href="https://ec.europa.eu/eurostat/data/database">Eurostat</a> and
-        <a href="https://www.bls.gov/data/">Bureau of Labor Statistics</a>
-      </li>
-      <li>
-        <strong>Central banks:</strong>
-        <a href="https://www.riksbank.se/en-gb/statistics/">Riksbank</a>,
-        <a href="https://data.ecb.europa.eu/data/datasets">ECB</a> and
-        <a href="https://fred.stlouisfed.org/">FRED</a>
-      </li>
-      <li>
-        <strong>Growth and productivity:</strong>
-        <a href="https://www.rug.nl/ggdc/productivity/pwt/">Penn World Table</a>,
-        <a href="https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023">Maddison Project Database</a> and
-        <a href="https://economy-finance.ec.europa.eu/economic-research-and-databases/economic-databases/ameco-database_en">AMECO</a>
-      </li>
-    </ul>
-  </main>
-</body>
-</html>
+- **International organizations:**
+  [OECD Data Explorer](https://data-explorer.oecd.org/),
+  [IMF World Economic Outlook](https://www.imf.org/en/Publications/SPROLLs/world-economic-outlook-databases),
+  [World Bank](https://data.worldbank.org/) and
+  [BIS](https://data.bis.org/)
+- **Statistical agencies:**
+  [Statistics Sweden](https://www.statistikdatabasen.scb.se/pxweb/en/ssd/),
+  [Eurostat](https://ec.europa.eu/eurostat/data/database) and
+  [Bureau of Labor Statistics](https://www.bls.gov/data/)
+- **Central banks:**
+  [Riksbank](https://www.riksbank.se/en-gb/statistics/),
+  [ECB](https://data.ecb.europa.eu/data/datasets) and
+  [FRED](https://fred.stlouisfed.org/)
+- **Growth and productivity:**
+  [Penn World Table](https://www.rug.nl/ggdc/productivity/pwt/),
+  [Maddison Project Database](https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023) and
+  [AMECO](https://economy-finance.ec.europa.eu/economic-research-and-databases/economic-databases/ameco-database_en)
