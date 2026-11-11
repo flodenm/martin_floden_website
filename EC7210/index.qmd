@@ -1,4 +1,3 @@
-<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -137,7 +136,7 @@
       <li><a href="RamseyModel.py" download>Python version (RamseyModel.py)</a></li>
     </ul>
 
-    <h2>Lecture Notes 4: The real business cycle (RBC) model</h2>
+    <h2>Lecture Notes 4: The RBC model</h2>
     <p>
       The impulse-response scripts compute the responses illustrated in Figures 1 and 2 of Lecture Notes 4. To compare the two calibrations,
       run the script with different values of the labor-supply parameter <var>γ</var>. The simulation scripts plot a short sample from the simulated
