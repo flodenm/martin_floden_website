@@ -33,6 +33,11 @@ economy and compute the model moments reported in Table 1.
 | Impulse responses | [rbc_ir.m](rbc_ir.m){download=""} | [rbc_ir.py](rbc_ir.py){download=""} |
 | Simulation | [rbc_with_simulation.m](rbc_with_simulation.m){download=""} | [rbc_with_simulation.py](rbc_with_simulation.py){download=""} |
 
+## Problem Set 4: Data for the exercise on estimating the effects of monetary policy
+
+- [Excel version, including data description (SEdata_2026.xlsx)](SEdata_2026.xlsx){download=""}
+- [Stata version (SEdata_2026.dta)](SEdata_2026.dta){download=""}
+
 ## Macroeconomic data
 
 - **International organizations:**
